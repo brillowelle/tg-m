@@ -1,0 +1,119 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.3 buttons
+/*----------------------------------------*/
+
+// Common button
+.rr-btn {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+	@include border-radius(500px);
+    color: var(--rr-common-white);
+    font-family: var(--rr-ff-heading);
+    display: inline-flex;
+	align-items: center;
+    text-transform:capitalize;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	z-index: 5;
+    padding: 20px 32px;
+    background-color: var(--rr-theme-primary);
+
+    &.rr-btn__primary {
+        background-color: #071C3C;
+    }
+
+    &.rr-btn__primary-color {
+        background-color: var(--rr-theme-primary);
+
+        .btn-wrap {
+            i {
+                padding-left: 10px;
+            }
+        }
+    }
+
+    &.rr-btn__transparent {
+        padding-left: 28.5px;
+        padding-right: 28.5px;
+        border: 2px solid var(--rr-theme-primary) !important;
+        background-color: transparent;
+
+        .btn-wrap {
+            i {
+                padding-left: 10px;
+            }
+
+            span {
+                color: var(--rr-color-900); 
+                font-family: var(--rr-ff-heading);
+                font-style: normal;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 16px; 
+                text-transform: capitalize; 
+            }
+        }
+    }
+
+    &:after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+    
+    .btn-wrap {
+        z-index: 1;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
+        border: none !important;
+
+        i {
+            padding-left: 40px;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 14px;
+        }
+        
+        .text-one, .text-two {
+            display: flex !important;
+            align-items: center;
+        }
+        
+        .text-one {
+            position: relative;
+            display: block;
+            color: var(--rr-common-white);
+            @extend %rr-transition-3;
+        }
+        
+        .text-two {
+            position: absolute;
+            top: 100%;
+            display: block;
+            color: var(--rr-common-white);
+            @extend %rr-transition-3;
+
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+    
+	&:hover, &:focus {
+        .text-one {
+            @include transform(translateY(-150%));
+        }
+        .text-two {
+            top: 50%;
+            @include transform(translateY(-50%));
+        }
+	}
+}

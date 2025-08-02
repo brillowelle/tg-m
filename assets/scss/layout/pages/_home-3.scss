@@ -1,0 +1,17 @@
+@use '../../utils' as *;
+
+.home-3__background {
+  position: relative;
+
+  &:after {
+    top: 858px;
+    position: absolute;
+    overflow: hidden;
+    content: "";
+    left: 107px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url("../imgs/home-3/background.svg");
+  }
+}

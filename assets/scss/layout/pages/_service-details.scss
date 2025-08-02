@@ -1,0 +1,86 @@
+@use '../../utils' as *;
+
+.service-details {
+
+  &__content {
+
+    &-media-item {
+
+      &-2 {
+        margin-left: 36px;
+        @media #{$md, $sm, $xs} {
+          margin-left: 0;
+        }
+      }
+
+      &-1 {
+        margin-right: -36px;
+        @media #{$md, $sm, $xs} {
+          margin-right: inherit;
+        }
+      }
+
+      &_img {
+        @include border-radius(20px);
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &-media {
+      overflow: hidden;
+      @include border-radius(20px);
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    ul {
+
+      li {
+        gap: 15px;
+        display: flex;
+        font-style: normal;
+        align-items: center;
+        text-transform: capitalize;
+        color: var(--rr-color-900);
+        font-size: var(--rr-fw-bold);
+
+        @media #{$xs} {
+          align-items: baseline;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+
+        span {
+          width: 20px;
+          height: 20px;
+          display: flex;
+          min-width: 20px;
+          text-align: center;
+          align-content: center;
+          justify-content: center;
+          @include border-radius(500px);
+          background: var(--rr-theme-primary);
+
+          i {
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--rr-common-white);
+          }
+        }
+      }
+    }
+  }
+}

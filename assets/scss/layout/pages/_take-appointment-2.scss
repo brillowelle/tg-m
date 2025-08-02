@@ -1,0 +1,81 @@
+@use '../../utils' as *;
+
+.take-appointment-2 {
+
+  &__space-top {
+    padding-top: 270px;
+
+    @media #{$md} {
+      padding-top: 230px;
+      padding-bottom: 80px;
+    }
+    @media #{$sm,$xs} {
+      padding-top: 220px;
+      padding-bottom: 70px;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__shape-background {
+    position: absolute;
+    z-index: -1;
+    width: 1760px;
+    height: 829px;
+    background: #F2F7FD;
+    border-radius: 50px;
+    content: "";
+    top: -270px;
+    left: -235px;
+
+    @media #{$md, $sm, $xs} {
+      display: none;
+    }
+  }
+
+    &__contact-item {
+      gap: 20px;
+
+      &__wrap {
+        gap: 40px;
+      }
+
+      &-text {
+
+        p {
+          margin-bottom: 5px;
+        }
+      }
+
+      &-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--rr-common-white);
+        @include border-radius(500px);
+
+        i {
+          font-size: 24px;
+          color: var(--rr-theme-primary);
+        }
+      }
+    }
+}
+
+.appointment-2__form__theme-color {
+
+  .input-wrapper {
+
+    i {
+      color: var(--rr-color-900) !important;
+    }
+  }
+
+  .appointment-2__form-input-select {
+    .nice-select:after {
+      color: var(--rr-color-900) !important;
+    }
+  }
+}

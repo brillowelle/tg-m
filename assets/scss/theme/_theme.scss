@@ -1,0 +1,496 @@
+@use '../utils' as *;
+
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Medilix - Healthcare & Medical Bootstrap HTML5 Template
+    Author: RRDevs
+    Support: https://support.rrdevs.net
+    Description: Medilix - Healthcare & Medical Bootstrap HTML5 Template.
+    Version: 1.0
+	Developer: Sabbir Ahmmed (https://github.com/ahmmedsabbirbd)
+
+-----------------------------------------------------------------------------------
+
+/************ TABLE OF CONTENTS ***************
+
+	-----------------
+    01. THEME CSS
+	-----------------
+		1.1 @forward 'colors';
+		1.2 @forward 'mixins';
+		1.3 @forward 'extends';
+		1.4 @forward 'breakpoints';
+		1.5 @forward 'typography';
+		1.6 @forward 'root';
+		1 index
+		
+	-----------------
+    02. COMPONENTS CSS
+	-----------------
+		2.1 @forward 'custom-class';
+		2.2 @forward 'background';
+		2.3 @forward 'buttons';
+		2.4 @forward 'offcanvas';
+		2.5 @forward 'section-title';
+		2.6 @forward 'breadcrumb';
+		2.7 @forward 'backtotop';
+		2.8 @forward 'animation';
+		2.9 @forward 'preloader';
+		2.10 @forward 'rangeSlider';
+		2.11 @forward 'search';
+		2 index
+
+	-----------------
+    03. HEADER CSS
+	-----------------
+		3.1 @forward 'header-common';
+		3.2 @forward 'header-1';
+		3.3 @forward 'header-2';
+		3.4 @forward 'header-3';
+		3.5 @forward 'header-4';
+		3 index
+
+    ---------------------------------
+	04. MENU CSS
+	---------------------------------
+		4.1 @forward 'menu';
+		4.2 @forward 'meanmenu';
+		4 index
+
+	---------------------------------
+	05. BLOG CSS
+	---------------------------------
+		5.1 @forward 'blog';
+		5.2 @forward 'sidebar';
+		5.3 @forward 'blog-details';
+		5.4 @forward 'blog-2';
+		5.5 @forward 'blog-3';
+		5.6 @forward 'blog-4';
+		5 index
+
+	---------------------------------
+	06. FOOTER CSS
+	---------------------------------
+		6.1 @forward 'footer';
+		6.2 @forward 'footer-copyright';
+		6.3 @forward 'footer-2';
+		6.4 @forward 'footer-3';
+		6.5 @forward 'footer-cta';
+		6 index
+		
+	---------------------------------
+	07. CTA CSS
+	---------------------------------
+		7.1 @forward 'cta';
+		7.2 @forward 'cta-2';
+		7 index
+		
+	---------------------------------
+	08. BRAND CSS
+	---------------------------------
+		8.1 @forward 'brand';
+		8 index
+
+	---------------------------------
+	09. Banner CSS
+	---------------------------------
+		9.1 @forward 'banner-1';
+		9.2 @forward 'banner-2';
+		9.3 @forward 'banner-3';
+		9 index
+
+	---------------------------------
+	10. PAGES CSS
+	---------------------------------
+		10.1 @forward './service';
+		10.2 @forward './treatment-process';
+		10.3 @forward './pricing';
+		10.4 @forward './team';
+		10.5 @forward './ask-question';
+		10.6 @forward './testimonial';
+		10.7 @forward './take-appointment';
+		10.8 @forward './about-us';
+		10.9 @forward './appointment-2';
+		10.10 @forward './filter';
+		10.11 @forward './service-2';
+		10.12 @forward './service-3';
+		10.13 @forward './experience';
+		10.14 @forward './pricing-action';
+		10.15 @forward './testimonial-2';
+		10.16 @forward './slider-text';
+		10.17 @forward './our-projects';
+		10.18 @forward './about-us-2';
+		10.19 @forward './service-4';
+		10.20 @forward './client-testimonial';
+		10.21 @forward './take-appointment-2';
+		10.22 @forward './doctor';
+		10.23 @forward './specialist-doctor';
+		10.24 @forward './experience-2';
+		10.25 @forward './latest-work';
+		10.26 @forward './home-2';
+		10.27 @forward './pricing-action-2';
+		10.28 @forward './about-us-3';
+		10.29 @forward './home-3';
+		10.30 @forward './why-choose-us';
+		10.31 @forward './wellness-expertise';
+		10.32 @forward './faq-page';
+		10.33 @forward './pricing-appointment';
+		10.34 @forward './contact';
+		10.35 @forward './404';
+		10.36 @forward './take-appointment-3';
+		10.37 @forward './pricing-action-3';
+		10.38 @forward './portfolio-details';
+		10.39 @forward './doctors-details';
+		10.40 @forward './service-details';
+		10 index
+ */
+
+/*----------------------------------------*/
+/*  1.1 Theme Default
+/*----------------------------------------*/
+
+// Google Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+/*---------------------------------
+    Typography css start 
+---------------------------------*/
+body {
+	font-family: var(--rr-ff-body);
+	font-size: var(--rr-fs-body);
+	line-height: var(--rr-lh-body);
+	font-weight: normal;
+	color: var(--rr-text-body);
+	background: var(--rr-body-primary);
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.body-font {
+	font-family: var(--rr-ff-body);
+	font-size: var(--rr-fs-body);
+	line-height: var(--rr-lh-body);
+	font-weight: normal;
+}
+
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	font-family: var(--rr-ff-heading);
+	color: var(--rr-heading-primary);
+	margin-top: 0;
+	margin-bottom: 0;
+	font-weight: var(--rr-fw-bold);
+	word-break: break-word;
+}
+
+h1, .h1 {
+	font-size: var(--rr-fs-h1);
+	line-height: var(--rr-lh-h1);
+	font-weight: var(--rr-fw-ebold);
+
+	@media #{$lg} {
+		font-size: 52px;
+		line-height:64px;
+	}
+	@media #{$md} {
+		font-size: 50px;
+		line-height:52px;
+	}
+	@media #{$sm} {
+		font-size: 38px;
+		line-height:50px;
+	}
+	@media #{$xs} {
+		font-size: 32px;
+		line-height:44px;
+	}
+}
+  
+h2, .h2 {
+	font-size: var(--rr-fs-h2);
+	line-height: var(--rr-lh-h2);
+	font-weight: var(--rr-fw-regular);
+
+  @media #{$lg, $md, $sm} {
+	font-size: 38px;
+	line-height:50px;
+  }
+  @media #{$xs} {
+    font-size: 30px;
+	  line-height: 42px;
+  }
+  @media #{$xxs} {
+    font-size: 27px;
+	  line-height: 37px;
+  }
+}
+
+h3, .h3 {
+	font-size: var(--rr-fs-h3);;
+	line-height: var(--rr-lh-h3);
+	font-weight: var(--rr-fw-medium);
+}
+
+h4, .h4 {
+	font-size: var(--rr-fs-h4);
+	line-height: var(--rr-lh-h4);
+	font-weight: var(--rr-fw-medium);
+}
+
+h5, .h5 {
+	font-size: var(--rr-fs-h5);
+	line-height: var(--rr-lh-h5);
+	font-weight: var(--rr-fw-bold);
+}
+
+h6, .h6 {
+	font-size: var(--rr-fs-h6);
+	line-height: var(--rr-lh-h6);
+	font-weight: var(--rr-fw-bold);
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+p {
+	font-size: var(--rr-fs-p);
+	font-weight: var(--rr-fw-normal);
+	color: var(--rr-text-body);
+	margin-bottom: 30px;
+	line-height: var(--rr-lh-p);
+}
+
+a {
+	text-decoration: none;
+}
+
+a,
+.btn,
+button,
+span,
+sub,
+sup,
+p,
+input,
+select,
+textarea,
+li,
+img,
+svg,
+.transition-3,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+svg path {
+	@extend %rr-transition-3;
+}
+
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+a:focus,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+
+a,
+button {
+	color: inherit;
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+button:focus{
+    outline: 0; 
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+hr:not([size]) {
+	margin: 0;
+	border-color: var(--rr-border-primary);
+	opacity: 1;
+	border-width: 1px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+textarea {
+	outline: none;
+	background-color: var(--rr-common-white);
+	width: 100%;
+	@include border-radius(999px);
+	width:100%;
+	padding: 15px 30px;
+	font-style: normal;
+	font-weight: 400;
+	height: 58px;
+	font-size: 16px;
+	line-height: 28px;
+	color: var(--rr-color-900) !important;
+	@include border-radius(999px);
+	border: 2px solid #E4E5E5;
+	@include rr-placeholder{
+		font-size: 16px;
+		line-height: 28px;
+		color: var(--rr-color-900) !important;
+	}
+	
+	&:focus {
+		outline: none;
+	}
+}
+
+input[type="date" i]::-webkit-calendar-picker-indicator {
+	filter: brightness(0) invert(1);
+	opacity:.8;
+}
+
+*::-moz-selection {
+  	background: var(--rr-common-selection);
+	color: var(--rr-common-white);
+	text-shadow: none;
+}
+::-moz-selection {
+  	background: var(--rr-common-selection);
+	color: var(--rr-common-white);
+	text-shadow: none;
+}
+::selection {
+  	background: var(--rr-common-selection);
+	color: var(--rr-common-white);
+	text-shadow: none;
+}
+
+*::-moz-placeholder {
+	opacity: 1;
+	font-size: 15px;
+	@include rr-placeholder{
+		color: var(--rr-text-body);
+	}
+}
+*::placeholder {
+	opacity: 1;
+	font-size: 15px;
+	@include rr-placeholder{
+		color: var(--rr-menu-primary);
+	}
+}
+
+a {
+	&:hover {
+		color: var(--rr-theme-primary);
+	}
+}
+
+a.rr-a-btn {
+	font-family: var(--rr-ff-heading);
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 15px;
+	text-transform: capitalize;
+	color: var(--rr-heading-primary);
+
+	i {
+		padding-left: 10px;
+	}
+
+	&:hover {
+		color: var(--rr-theme-primary);
+	}
+}
+
+/*----------------------------------------
+   Bootstrap customize
+-----------------------------------------*/
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+	--bs-gutter-x: 30px;
+}
+@media (min-width: 1400px) {
+	
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+		max-width: 1320px;
+	}
+}
+
+.row {
+	--bs-gutter-x: 30px;
+}
+
+.g-40,
+.gx-40 {
+	--bs-gutter-x: 40px;
+}
+
+.g-40,
+.gy-40 {
+	--bs-gutter-y: 40px;
+}
+
+.g-50,
+.gx-50 {
+	--bs-gutter-x: 50px;
+}
+
+.g-50,
+.gy-50 {
+	--bs-gutter-y: 50px;
+}
+
+.g-60,
+.gy-60 {
+	--bs-gutter-y: 60px;
+}
+.g-60,
+.gx-60 {
+	--bs-gutter-x: 60px;
+}
+
+// important css
+.body-background {
+	background-color: #F2F7FD;
+}

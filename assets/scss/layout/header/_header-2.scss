@@ -1,0 +1,123 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.1 header-common
+/*----------------------------------------*/
+.header-2 {
+	top: 0;
+	left: 0;
+	padding: 0;
+	width: 100%;
+	z-index: 1030;
+	background-color: transparent;
+	position: fixed !important;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+
+	&.rr-sticky {
+		background-color: var(--rr-color-900) !important;
+		box-shadow: 0px 2px 20px rgb(29 29 29 / 50%) !important;
+	}
+
+	.header {
+
+		&__hamburger {
+			.bar-icon span {
+				background-color: var(--rr-common-white);
+			}
+		}
+
+		&__main {
+			@media #{$xs, $sm, $md, $lg} {
+				padding: 15px 0;
+			}
+
+			.main-menu {
+
+				ul {
+					 li {
+						 @media (max-width:1399px) {
+							 &:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(5)) {
+								 display: none;
+							 }
+						 }
+					 }
+				}
+			}
+		}
+
+		&__left {
+			gap: 75px;
+		}
+	}
+
+	.rr-header-icon-search {
+		padding-right: 32px;
+		margin-right: 32px;
+		line-height: 53px;
+		border-right: 1px solid rgb(255 255 255 / 20%);
+
+		@media #{$xs} {
+			padding-right: 0;
+			margin-right: 0;
+			border-right: 0;
+		}
+
+		button {
+			font-style: normal;
+			font-weight: 900;
+			font-size: 25px;
+			line-height: 25px;
+			color: var(--rr-common-white);
+
+			@media #{$xs} {
+				font-size: 20px;
+			}
+
+			&:hover {
+				color: var(--rr-theme-primary);
+			}
+		}
+	}
+
+	.rr-header-contact-btn {
+		margin-left: 22px;
+		gap: 13px;
+
+		&__icon {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 50px;
+			height: 50px;
+			min-height: 50px;
+			min-width: 50px;
+			background: var(--rr-theme-primary);
+			@include border-radius(500px);
+
+			i {
+				font-style: normal;
+				font-weight: 900;
+				font-size: 25px;
+				line-height: 25px;
+				color: var(--rr-common-white);
+			}
+		}
+	}
+
+	.rr-header-message {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 25px;
+		color: var(--rr-common-white);
+		padding-right: 32px;
+		line-height: 53px;
+		border-right: 1px solid rgb(255 255 255 / 20%);
+
+
+		&:hover {
+			color: var(--rr-theme-primary);
+		}
+	}
+}

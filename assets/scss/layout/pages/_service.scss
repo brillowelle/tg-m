@@ -1,0 +1,39 @@
+@use '../../utils' as *;
+
+.service {
+
+    &__space {
+      @media #{$md} {
+        padding-top: 80px;
+      }
+      @media #{$sm,$xs} {
+        padding-top: 70px;
+      }
+    }
+
+    &__item {
+      padding: 30px;
+      background: var(--rr-common-white);
+      box-shadow: 0px 5px 60px rgba(0, 0, 0, 0.05);
+      @include border-radius(20px);
+      overflow: hidden;
+
+      &-icon {
+        img {
+          @extend %rr-transition-3;
+        }
+      }
+
+      a {
+        &:hover {
+          color: var(--rr-theme-primary);
+        }
+      }
+
+      &:hover {
+        .service__item-icon img {
+          @extend %hover-shake-animation;
+        }
+      }
+    }
+}

@@ -1,0 +1,105 @@
+@use '../../utils' as *;
+
+.wellness-expertise {
+
+  &__content {
+    max-width: 600px;
+
+    &__list {
+      max-width: 378px;
+      list-style: none;
+      column-count: 2;
+      column-gap: 60px;
+      margin-bottom: -20px;
+
+      @media #{$xs} {
+        margin-bottom: -10px;
+        column-count: 1;
+      }
+
+      li {
+        margin-bottom: 20px;
+        color: var(--rr-color-900);
+        display: flex;
+        align-items: center;
+
+        @media #{$xs} {
+          margin-bottom: 10px;
+        }
+
+        i {
+          margin-right: 15px;
+          color: var(--rr-theme-primary);
+          font-weight: var(--rr-fw-black);
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &__media {
+    display: flex;
+    position: relative;
+    justify-content: end;
+    overflow: hidden;
+    flex-direction: column;
+    @include border-radius(20px);
+    max-width: 600px;
+    margin-left: auto;
+
+    @media #{$md, $sm, $xs} {
+      margin-top: 60px;
+      margin-right: auto;
+    }
+
+    &__box {
+      gap: 20px;
+      bottom: 32px;
+      right: 31px;
+      display: flex;
+      max-width: 269px;
+      position: absolute;
+      align-items: center;
+      padding: 15px 20px;
+      padding-right: 52px;
+      @include border-radius(20px);
+      background: var(--rr-color-100);
+
+      @media #{$xs} {
+        gap: 10px;
+        padding: 5px 15px;
+      }
+
+      &-icon {
+        width: 77px;
+        height: 77px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include border-radius(500px);
+        background-color: var(--rr-theme-primary);
+
+        @media #{$xs} {
+          width: 60px;
+          height: 60px;
+          svg {
+            width: 35px;
+          }
+        }
+      }
+
+      &-text {
+        h2 {
+          margin-bottom: 2px;
+          color: var(--rr-color-900);
+          font-weight: var(--rr-fw-medium);
+        }
+
+        h6 {
+          font-weight: var(--rr-fw-regular);
+          color: var(--rr-color-900);
+        }
+      }
+    }
+  }
+}

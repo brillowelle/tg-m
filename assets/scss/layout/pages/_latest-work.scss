@@ -1,0 +1,123 @@
+@use '../../utils' as *;
+
+.latest-work {
+  &__content {
+    max-width: 699px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__slider {
+    @media #{$xs, $sm} {
+      padding: 0 15px;
+    }
+
+    &-dot {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      padding: 0;
+      z-index:1;
+      justify-content: center;
+
+      @media #{$sm, $xs} {
+        bottom: 52px !important;
+      }
+
+      @media (max-width: 480px) {
+        position: inherit !important;
+        justify-content: center !important;
+        bottom: 40px !important;
+        right: inherit !important;
+      }
+
+      .swiper-pagination-bullet {
+        width: 24px;
+        height:24px;
+        padding: 0;
+        margin: 0 !important;
+        @include border-radius(500px);
+        overflow: hidden;
+        background: transparent;
+        display: flex;
+        position: relative;
+        border: 2px solid transparent;
+        @extend %rr-transition-3;
+        opacity: 1;
+
+        &:after {
+          position:absolute;
+          width: 10px;
+          height: 10px;
+          content: "";
+          top: calc(50% - 5px);
+          background: var(--rr-theme-primary);
+          @include border-radius(500px);
+          left: calc(50% - 5px);
+        }
+
+        &-active {
+          border-color: var(--rr-theme-primary);
+
+          &:after {
+            background: var(--rr-theme-primary);
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    @include border-radius(20px);
+    overflow: hidden;
+    
+    @media #{$xs} {
+      @include border-radius(10px);
+    }
+
+    &:hover {
+      .latest-work__item-hover {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &-media {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-hover {
+      @extend %rr-transition-3;
+      opacity: 0;
+      visibility: visible;
+      position: absolute;
+      bottom: 40px;
+      left: 40px;
+      padding: 20px 30px;
+      padding-right: 65px;
+      background: #FFFFFF;
+      border-left: 3px solid #185EC8;
+      @include border-radius(20px);
+
+      h4 {
+        a {
+          text-transform: capitalize;
+        }
+      }
+
+      @media #{$xs} {
+        padding: 15px 15px;
+        left: 20px;
+        bottom: 20px;
+
+        h4 {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

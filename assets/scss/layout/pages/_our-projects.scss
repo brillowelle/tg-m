@@ -1,0 +1,187 @@
+@use '../../utils' as *;
+
+.our-projects {
+
+    &__content {
+        margin-bottom: 30px;
+
+        @media #{$lg} {
+            margin-bottom: 15px;
+        }
+
+        .section {
+
+            &__subtitle {
+                margin-bottom: 25px;
+
+                @media #{$lg} {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+    }
+
+    &__item {
+        @include border-radius(20px);
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        .rr-btn {
+            padding: 20px 31px;
+
+            .btn-wrap {
+
+                span {
+                    i {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+
+        &.has--title {
+            width: 100%;
+            padding-top: 33px;
+            padding-left: 40px;
+            padding-right: 50px;
+            padding-bottom: 45px;
+            background: #F2F7FD;
+            border: 1px solid #E4E5E5;
+            @include border-radius(20px);
+
+            @media #{$xl, $lg, $md, $sm, $xs} {
+                padding: 20px;
+            }
+
+            .rr-btn {
+
+                @media #{$xl, $lg, $md, $sm, $xs} {
+                    padding: 11px 32px;
+                }
+            }
+        }
+
+        &__content {
+            position: relative;
+
+            &::before {
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                content: "";
+                width: 100%;
+                z-index: -1;
+                opacity: 0.9;
+                height: 100%;
+                @extend %rr-transition-3;
+                visibility: hidden;
+                transform: scale(0);
+                position: absolute;
+                @include border-radius(20px);
+                background: var(--rr-theme-primary);
+            }
+
+            &-media {
+                overflow: hidden;
+                @include border-radius(20px);
+                transition: all 0.3s;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            &-icon {
+                @extend %rr-transition-3;
+                opacity: 0;
+                a {
+                    top: calc(50% - 118px);
+                    left: calc(50% - 40px);
+                    z-index: 2;
+                    width: 80px;
+                    height: 80px;
+                    right: 165px;
+                    display: flex;
+                    position: absolute;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    @include border-radius(500px);
+                    border: 1px solid var(--rr-common-white);
+                    @media #{$lg} {
+                        width: 70px;
+                        top: calc(50% - 106px);
+                        height: 70px;
+                    }
+                    @media #{$md} {
+                        width: 60px;
+                        top: calc(50% - 90px);
+                        height: 60px;
+                    }
+                    @media #{$sm, $xs} {
+                        top: calc(50% - 90px);
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+
+            &-text {
+                left: calc(50% - 3px);
+                z-index: -1;
+                bottom: 10px;
+                padding: 20px;
+                visibility: hidden;
+                text-align: center;
+                position: absolute;
+                @extend %rr-transition-3;
+                width: calc(100% - 20px);
+                @include border-radius(20px);
+                transform: translate(-50%, 30px);
+                background-color: var(--rr-common-white);
+                border-left: 3px solid #185EC8;
+
+                h4 {
+                    margin-bottom: 13px;
+                }
+
+                p {
+                    margin-bottom: 0;
+                }
+
+            }
+        }
+
+        &:hover {
+            .our-projects__item__content {
+                &-text {
+                    z-index: 1;
+                    visibility: visible;
+                    transform: translate(-50%, 0px);
+                }
+
+                &-icon {
+                    opacity: 1;
+                }
+
+                &::before {
+                    z-index: 1;
+                    visibility: visible;
+                    transform: scale(100%);
+                }
+
+                &-media {
+
+                    img {
+
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

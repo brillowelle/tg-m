@@ -1,0 +1,23 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.6 sectiontitle
+/*----------------------------------------*/
+// Section subtitle 1
+.section {
+  &__title-wrapper {
+    position: relative;
+    z-index: 55;
+  }
+
+  &__subtitle {
+
+    img {
+      margin-right: 5px;
+    }
+  }
+}
+
+.title-animation {
+  overflow: hidden;
+}

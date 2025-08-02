@@ -1,0 +1,121 @@
+@use '../../utils' as *;
+
+.team {
+
+  &__item {
+    background: var(--rr-common-white);
+    @include border-radius(20px);
+    overflow: hidden;
+
+    &-box_shadow {
+      box-shadow: 0px 5px 60px rgba(0, 0, 0, 0.05);
+    }
+
+    &-doctor_page {
+
+      button {
+        border: 1px solid var(--rr-theme-primary) !important;
+      }
+
+      .team__item {
+        &-content {
+          padding: 25px 20px;
+        }
+      }
+    }
+
+    &-media {
+      height: 370px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-content {
+      padding: 20px 40px 30px 30px;
+      display: flex;
+      position: relative;
+      z-index: 1;
+      justify-content: space-between;
+      align-items: center;
+
+      &-right {
+        &:hover .team__item-content-share {
+          opacity: 1;
+          visibility: visible;
+          @include transform(translate(0, 0));
+        }
+      }
+    }
+
+    &-content-share {
+      display: flex;
+      gap: 20px;
+      padding: 15px 10px;
+      background: #F2F7FD;
+      flex-direction: column;
+      @include border-radius(20px);
+      position: absolute;
+      bottom: 92px;
+      z-index: 8;
+      opacity: 0;
+      visibility: hidden;
+      @include transform(translate(0, 92px));
+      @extend %rr-transition-3;
+
+      a {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 110%;
+        color: var(--rr-color-900);
+
+        &:hover {
+          color: var(--rr-theme-primary);
+
+          svg path[fill="#071C3C"] {
+            fill: var(--rr-theme-primary);
+          }
+        }
+      }
+    }
+
+    button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        @include border-radius(500px);
+        color: var(--rr-theme-primary);
+        border: 1px solid #E4E5E5;
+
+        &:hover {
+          background: var(--rr-theme-primary);
+          color: var(--rr-common-white);
+        }
+      }
+    }
+
+  &__scrollbar {
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1 !important;
+    background: rgba(1, 9, 21, 0.06);
+    width: 300px;
+    height: 10px;
+    background: #F2F7FD;
+    border-radius: 5px;
+    max-width: 100%;
+
+
+    .swiper-scrollbar-drag {
+      height: 100%;
+      background: var(--rr-theme-primary);
+    }
+  }
+}

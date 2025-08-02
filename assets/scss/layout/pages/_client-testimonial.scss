@@ -1,0 +1,129 @@
+@use '../../utils' as *;
+
+.client-testimonial {
+
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+
+  &__shape {
+    bottom: 88px;
+    z-index: -1;
+    right: -221px;
+    position: absolute;
+  }
+
+  &__content {
+    max-width: 630px;
+  }
+
+  &__media {
+    @include border-radius(20px);
+    overflow: hidden;
+    margin-right: -133px;
+
+    @media #{$md, $md, $sm, $xs} {
+      margin-right: inherit;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__slider {
+
+    &-wrapper {
+      @include border-radius(20px);
+      overflow: hidden;
+      background: var(--rr-theme-secondary);
+    }
+
+    &-dot {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      padding: 0;
+      z-index:1;
+      justify-content: end;
+      right: 60px !important;
+      top: inherit !important;
+      left: inherit !important;
+      bottom: 79px !important;
+      position: absolute !important;
+
+      @media #{$sm, $xs} {
+        bottom: 52px !important;
+      }
+
+      @media (max-width: 480px) {
+        position: inherit !important;
+        justify-content: center !important;
+        bottom: 40px !important;
+        right: inherit !important;
+      }
+
+      .swiper-pagination-bullet {
+        width: 24px;
+        height:24px;
+        padding: 0;
+        margin: 0 !important;
+        @include border-radius(500px);
+        overflow: hidden;
+        background: transparent;
+        display: flex;
+        position: relative;
+        border: 2px solid transparent;
+        @extend %rr-transition-3;
+        opacity: 1;
+
+        &:after {
+          position:absolute;
+          width: 10px;
+          height: 10px;
+          content: "";
+          top: calc(50% - 5px);
+          background: var(--rr-theme-primary);
+          @include border-radius(500px);
+          left: calc(50% - 5px);
+        }
+
+        &-active {
+          border-color: var(--rr-theme-primary);
+
+          &:after {
+            background: var(--rr-theme-primary);
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    padding: 60px;
+
+    @media #{$sm, $xs} {
+      padding: 30px 25px;
+    }
+
+    @media (max-width: 480px) {
+      padding-bottom: 70px;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 34px;
+    }
+
+    &-author {
+      gap: 20px;
+
+      &-content {
+
+        h5 {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+@use '../../utils' as *;
+
+.why-choose-us {
+  margin: 0 80px;
+  overflow: hidden;
+  position: relative;
+  @include border-radius(50px);
+  background: var(--rr-color-100);
+
+  @media #{$lg, $md, $sm, $xs} {
+    padding-bottom: 80px;
+  }
+  @media #{$md, $sm, $xs} {
+    padding-top: 80px;
+  }
+
+  @media #{$lg, $md, $sm, $xs} {
+    margin: 0 20px;
+  }
+  @media #{$xs} {
+    margin: 0;
+  }
+
+  &__shap {
+    left: 0px;
+    top: 0px;
+    opacity: 10%;
+    position: absolute;
+  }
+
+  &__content {
+    z-index: 2;
+    position: relative;
+
+    .rr-btn {
+      .btn-wrap {
+        i {
+          padding-left: 10px !important;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    @media #{$lg,$md, $sm, $xs} {
+      display: inherit;
+    }
+
+    &-media {
+      display: flex;
+      position: relative;
+      justify-content: center;
+
+      @media #{$md, $sm, $xs} {
+        margin-top: 40px;
+      }
+
+      img {
+        z-index: 2;
+        position: relative;
+      }
+
+      &-shap {
+        top: 13px;
+        left: -33px;
+        width: 566px;
+        height: 560px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        position: absolute;
+
+        @media #{$xs} {
+          display: none;
+        }
+      }
+    }
+
+    &-list {
+      z-index: 3;
+      column-count: 2;
+      column-gap: 47px;
+      list-style: none;
+      margin-left: -75px;
+      padding: 38px 40px;
+      padding-bottom: 28px;
+      @include border-radius(20px);
+      background: var(--rr-common-white);
+
+
+      @media #{$md, $sm, $xs} {
+        margin-left: 0;
+        padding: 30px 15px;
+        padding-bottom: 20px;
+        column-gap: 10px;
+      }
+      @media #{$xs} {
+        column-count: 1;
+      }
+
+      @media #{$xl, $lg, $md, $sm, $xs} {
+        column-gap: 15px;
+        padding: 30px 25px;
+        padding-bottom: 20px;
+      }
+
+      @media #{$xl} {
+        margin-left: -152px;
+      }
+
+      li {
+        color: var(--rr-color-900);
+        font-size: var(--rr-fs-body);
+        margin-bottom: 10px;
+
+        i {
+          margin-right: 15px;
+          color: var(--rr-theme-primary);
+          font-weight: var(--rr-fw-black);
+        }
+      }
+    }
+  }
+}

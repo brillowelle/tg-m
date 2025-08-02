@@ -1,0 +1,16 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.2 background
+/*----------------------------------------*/
+.white-bg {  background-color: var(--rr-common-white);}
+.black-bg {background-color: var(--rr-common-black);}
+// Theme bg
+.theme-bg-primary { background-color: var(--rr-theme-primary); }
+.theme-bg-glow { background-color: var(--rr-theme-glow); }
+.theme-bg-1 { background-color: #F2F7FD; }
+.theme-bg-color-900 { background-color: var(--rr-color-900); }
+.theme-bg-color-100 { background-color: var(--rr-color-100); }
+
+// footer background
+.theme-footer-bg-1 { background-color: #0A2540; }

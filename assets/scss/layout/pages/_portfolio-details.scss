@@ -1,0 +1,153 @@
+@use '../../utils' as *;
+
+.portfolio-details {
+
+  &__media {
+    overflow: hidden;
+    @include border-radius(20px);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__author {
+    left: 0;
+    bottom: 0;
+    min-width: 261px;
+    position: absolute;
+    display: inline-block;
+    padding: 40px;
+    @include border-radius(0px 20px);
+    background: var(--rr-color-100);
+
+    @media #{$md, $sm, $xs} {
+      padding: 20px 25px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      position: inherit;
+      align-items: center;
+      @include border-radius(20px);
+    }
+    @media #{$xs} {
+      display: inline-block;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+        @media #{$md, $sm, $xs} {
+          margin-bottom: 0;
+        }
+      }
+
+      @media #{$md, $sm, $xs} {
+        padding: 10px 20px;
+      }
+      span {
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__content {
+
+    &__contact {
+      padding: 38px 15px;
+      @include border-radius(20px);
+      background: var(--rr-color-100);
+      border: 1px solid var(--rr-theme-primary);
+
+      @media #{$lg, $md, $sm, $xs} {
+        margin-top: 40px;
+      }
+
+      h4 {
+        max-width: 240px;
+        margin-left: auto;
+        margin-right: auto;
+        @media #{$lg, $md, $sm, $xs} {
+          max-width: 100%;
+        }
+      }
+
+      h6 {
+
+        a {
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .rr-btn {
+        .btn-wrap {
+          i {
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+
+    &__list {
+
+      li {
+        gap: 15px;
+        display: flex;
+        font-style: normal;
+        align-items: center;
+        text-transform: capitalize;
+        color: var(--rr-color-900);
+        font-size: var(--rr-fw-bold);
+
+        @media #{$xs} {
+          align-items: baseline;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+
+        span {
+          width: 20px;
+          height: 20px;
+          display: flex;
+          min-width: 15px;
+          align-content: center;
+          justify-content: center;
+          @include border-radius(500px);
+          background: var(--rr-theme-primary);
+
+          i {
+            font-weight: 400;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            line-height: 10px;
+            color: var(--rr-color-100);
+          }
+        }
+      }
+    }
+  }
+
+  &__media-wrapper {
+
+    &__item {
+      overflow: hidden;
+      @include border-radius(20px);
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

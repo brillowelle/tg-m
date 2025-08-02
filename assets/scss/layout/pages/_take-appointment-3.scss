@@ -1,0 +1,278 @@
+@use '../../utils' as *;
+
+.take-appointment-3 {
+
+  &__content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 840px;
+
+    .section__title {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 630px;
+    }
+  }
+
+  &__form-input-select {
+    .nice-select{
+      box-sizing: border-box;
+      clear: both;
+      cursor: pointer;
+      display: block;
+      float: left;
+      font-family: inherit;
+      outline: none;
+      position: relative;
+      text-align: left !important;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      white-space: nowrap;
+      width: 100%;
+      z-index: inherit;
+      padding-left: 20px;
+      padding-right: 45px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: none;
+      height: 60px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      @include border-radius(30px !important);
+      color: rgb(7 28 60 / 60%) !important;
+      background-color: var(--rr-color-100) !important;
+
+      @include  rr-placeholder{
+        color: rgb(7 28 60 / 60%) !important;
+      }
+
+      &:hover{
+        border-color: #dbdbdb;
+      }
+      &:active,
+      &.open,
+      &:focus{
+        border-color: #999;
+      }
+      &::after{
+        position: absolute;
+        content: '\f107';
+        top: calc(50% - 1px);
+        right: 26px;
+        font-family: var(--rr-ff-fontawesome);
+        color: var(--rr-heading-primary);
+        font-weight: 500;
+        pointer-events: none;
+        -webkit-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
+        margin-top: 0;
+        transform-origin: center;
+        @extend %translateY1_2;
+      }
+
+      &.open{
+        &::after{
+          @include transform(translateY(-50%) rotate(-180deg));
+        }
+        & .list{
+          opacity: 1;
+          pointer-events: auto;
+          -webkit-transform: scale(1) translateY(0);
+          -ms-transform: scale(1) translateY(0);
+          transform: scale(1) translateY(0);
+        }
+      }
+      &.disabled{
+        border-color: #ededed;
+        color: #999;
+        pointer-events: none;
+        &::after{
+          border-color: #cccccc;
+        }
+      }
+      &.wide{
+        width: 100%;
+
+        & .list{
+          left: 0 !important;
+          right: 0 !important;
+        }
+      }
+      &.right{
+        float: right;
+
+        & .list{
+          left: auto;
+          right: 0;
+        }
+      }
+      &.small{
+        font-size: 12px;
+        height: 36px;
+        line-height: 34px;
+        &::after{
+          height: 4px;
+          width: 4px;
+        }
+        & .option{
+          line-height: 34px;
+          min-height: 34px;
+        }
+      }
+      & .list{
+        border: 1px solid  #C9F3FF;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+        box-sizing: border-box;
+        margin-top: 4px;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        -webkit-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-transform: scale(0.75) translateY(-21px);
+        -ms-transform: scale(0.75) translateY(-21px);
+        transform: scale(0.75) translateY(-21px);
+        -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+        transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+        z-index: 9;
+      }
+      & .option{
+        cursor: pointer;
+        font-weight: 400;
+        line-height: 40px;
+        list-style: none;
+        min-height: 40px;
+        outline: none;
+        padding-left: 18px;
+        padding-right: 29px;
+        text-align: left;
+        -webkit-transition: all 0.2s;
+        color: var(--rr-heading-primary);
+        transition: all 0.2s;
+        &:hover {
+          background-color: #f6f7f9;
+        }
+        &.selected{
+          font-weight: bold;
+        }
+        &.disabled{
+          background-color: transparent;
+          color: #999;
+          cursor: default;
+        }
+      }
+    }
+    .no-csspointerevents {
+      .nice-select {
+        .list {
+          display: none;
+        }
+        &.open {
+          .list {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &__form {
+    position: relative;
+    z-index: 2;
+    padding: 60px 110px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1070px;
+    background: var(--rr-common-white);
+    box-shadow: 0px 5px 60px rgba(0, 0, 0, 0.05);
+    @include border-radius(20px);
+
+    @media #{$md} {
+      padding: 30px 40px;
+    }
+    @media #{$sm} {
+      padding: 30px 35px;
+    }
+    @media #{$xs} {
+      padding: 30px 25px;
+    }
+
+    .rr-btn {
+      width: 100%;
+      display: flex;
+    }
+
+    &-input {
+      margin-bottom: 30px;
+
+      &-select {
+        .nice-select {
+          margin-bottom: 30px;
+        }
+      }
+
+      label {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 30px;
+        text-transform: capitalize;
+        color: var(--rr-color-900);
+        margin-bottom: 5px;
+      }
+
+      div.input-wrapper {
+        z-index: 1;
+        position: relative;
+
+        i {
+          z-index: 2;
+          position: absolute;
+          right: 20px;
+          font-family: var(--rr-ff-fontawesome);
+          font-style: normal;
+          font-weight: 900;
+          font-size: 14px;
+          top: calc(50% - 8px);
+          line-height: 14px;
+          color: var(--rr-heading-primary);
+        }
+
+        input {
+          z-index: 2;
+          position: relative;
+          width: 100%;
+          padding-left: 20px;
+          padding-right: 45px;
+          border: none;
+          height: 60px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 28px;
+          @include border-radius(30px !important);
+          color: rgb(7 28 60 / 60%) !important;
+          background-color: var(--rr-color-100) !important;
+
+          @include  rr-placeholder{
+            color: rgb(7 28 60 / 60%) !important;
+          }
+        }
+      }
+    }
+  }
+}

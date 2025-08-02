@@ -1,0 +1,45 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.1 blog
+/*----------------------------------------*/
+.blog {
+
+    &__item {
+        box-shadow: 0px 5px 60px rgba(0, 0, 0, 0.05);
+        @include border-radius(20px);
+        overflow: hidden;
+
+        &-media {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-content {
+            background-color: var(--rr-common-white);
+            padding: 36px 40px 40px;
+
+            @media #{$lg, $md, $sm, $xs} {
+                padding: 30px 25px;
+            }
+
+            &-date {
+                display: flex;
+                align-items: center;
+                color: var(--rr-color-900);
+
+                i {
+                    font-size: 12px;
+                    margin-right: 10px;
+                }
+
+                span {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}

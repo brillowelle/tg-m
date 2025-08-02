@@ -1,0 +1,95 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.1 blog
+/*----------------------------------------*/
+.blog-4 {
+
+    &__pagination {
+        gap: 15px;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        a {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--rr-fs-h4);
+            color: var(--rr-color-900);
+            @include border-radius(30px);
+            font-weight: var(--rr-fw-medium);
+            border: 1px solid var(--rr-color-200);
+
+            &.active {
+                border-color: var(--rr-theme-primary);
+            }
+
+            &:hover {
+                border-color: var(--rr-theme-primary);
+            }
+        }
+    }
+
+    &__item {
+
+        &-content {
+            max-width: 845px;
+
+            @media #{$xl, $lg, $md, $sm, $xs} {
+                max-width: 100%;
+            }
+        }
+
+        &-thumb {
+            display: block;
+            @include border-radius(20px);
+            height: 424px;
+            width: 100%;
+            overflow: hidden;
+
+            @media #{$xs} {
+                height: 300px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-meta {
+            gap: 27px;
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            align-items: center;
+
+            li {
+                display: flex;
+                align-items: center;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+
+                i {
+                    font-size: 12px;
+                    margin-right: 5px;
+                    color: var(--rr-theme-primary);
+                }
+
+                &:hover {
+                    a {
+                        color: var(--rr-theme-primary);
+                    }
+                }
+            }
+        }
+    }
+}

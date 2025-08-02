@@ -1,0 +1,137 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  9.2 banner Style 1
+/*----------------------------------------*/
+
+// Banner style 2
+.banner-2 {
+    background-size: auto;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__shape {
+        position: absolute;
+        content: "";
+        width: 1522.97px;
+        height: 1356.07px;
+        background: var(--rr-theme-primary);
+        bottom: -1047px;
+        left: -99px;
+        z-index: -1;
+        @include transform(rotate(-20deg));
+        @include border-radius(500px);
+        filter: blur(217px);
+    }
+
+    &__space {
+        padding: 205px 0 110px;
+
+        @media #{$md, $sm, $xs}  {
+            padding-top: 160px;
+            padding-bottom: 90px;
+        }
+    }
+
+    &__content {
+        max-width: 503px;
+
+        @media #{$md, $sm, $xs} {
+            max-width: 100%;
+            margin-bottom: 60px;
+        }
+
+        h1 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 72.8185px;
+            line-height: 83px;
+            text-transform: capitalize;
+
+
+            @media #{$sm} {
+                font-size: 50px;
+                line-height:60px;
+            }
+            @media #{$xs} {
+                font-size: 40px;
+                line-height:50px;
+            }
+        }
+
+        .rr-btn {
+            padding: 20px 30px;
+        }
+
+        .readmore {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 15px;
+            text-transform: capitalize;
+            color: var(--rr-common-white) !important;
+            margin-left: 38px;
+
+            @media #{$xs} {
+                margin-left: inherit;
+                margin-top: 20px;
+            }
+
+            svg {
+                margin-left: 10px;
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+
+    &__media {
+        position: relative;
+        overflow: hidden;
+        max-width: 504px;
+        margin-left:  auto;
+
+        @media #{$xl, $lg, $md, $sm, $xs} {
+            margin-left: inherit;
+            max-width: 100%;
+            margin-right: inherit;
+        }
+
+        img {
+            margin-left: 35px;
+            width: 469px;
+            height: 496px;
+            overflow: hidden;
+            object-fit: cover;
+            @include border-radius(20px);
+            @media #{$xl, $lg, $md, $sm, $xs} {
+                width: 100%;
+                height: 100%;
+                margin-left: inherit;
+            }
+
+        }
+
+        &-shape {
+            z-index: 2;
+            position: absolute;
+            left: 0;
+            bottom: -43px;
+            width: 123px;
+            height: 131px;
+            top: 322px;
+            background: var(--rr-theme-primary);
+            border-radius: 20px 234.5px 20px 20px;
+
+            @media #{$xl, $lg, $md, $sm, $xs} {
+                display: none;
+            }
+        }
+    }
+}

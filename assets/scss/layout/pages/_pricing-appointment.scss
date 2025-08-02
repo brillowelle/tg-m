@@ -1,0 +1,254 @@
+@use '../../utils' as *;
+.pricing-appointment {
+
+  &__contact-item {
+    gap: 20px;
+
+    &__wrap {
+      gap: 36px;
+    }
+
+    &-text {
+
+      p {
+        margin-bottom: 5px;
+      }
+    }
+
+    &-icon {
+      width: 60px;
+      height: 60px;
+      background: var(--rr-color-100);
+      @include border-radius(500px);
+
+      i {
+        font-size: 24px;
+        color: var(--rr-theme-primary);
+      }
+    }
+  }
+
+  &__form {
+    padding: 40px;
+    overflow: hidden;
+    @include border-radius(20px);
+    box-shadow: 0px 5px 60px rgba(0, 0, 0, 0.05);
+    @media #{$xs} {
+      padding: 20px;
+    }
+
+    &-select {
+
+      .nice-select{
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        clear: both;
+        cursor: pointer;
+        display: block;
+        float: left;
+        font-family: inherit;
+        outline: none;
+        position: relative;
+        text-align: left !important;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        white-space: nowrap;
+        width: 100%;
+        z-index: inherit;
+        padding-left: 20px;
+        padding-right: 45px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+        border: none;
+        height: 70px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        @include border-radius(30px !important);
+        color: var(--rr-color-900)!important;
+        background-color: var(--rr-color-100) !important;
+
+        @include  rr-placeholder{
+          color: var(--rr-color-900)!important;
+        }
+
+        &:hover{
+          border-color: #dbdbdb;
+        }
+        &:active,
+        &.open,
+        &:focus{
+          border-color: #999;
+        }
+        &::after{
+          position: absolute;
+          content: '\f107';
+          top: calc(50% - 1px);
+          right: 26px;
+          font-family: var(--rr-ff-fontawesome);
+          color: var(--rr-color-800);
+          font-weight: 500;
+          pointer-events: none;
+          -webkit-transition: all 0.15s ease-in-out;
+          transition: all 0.15s ease-in-out;
+          margin-top: 0;
+          transform-origin: center;
+          @extend %translateY1_2;
+        }
+
+        &.open{
+          &::after{
+            @include transform(translateY(-50%) rotate(-180deg));
+          }
+          & .list{
+            opacity: 1;
+            pointer-events: auto;
+            -webkit-transform: scale(1) translateY(0);
+            -ms-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+          }
+        }
+        &.disabled{
+          border-color: #ededed;
+          color: #999;
+          pointer-events: none;
+          &::after{
+            border-color: #cccccc;
+          }
+        }
+        &.wide{
+          width: 100%;
+
+          & .list{
+            left: 0 !important;
+            right: 0 !important;
+          }
+        }
+        &.right{
+          float: right;
+
+          & .list{
+            left: auto;
+            right: 0;
+          }
+        }
+        &.small{
+          font-size: 12px;
+          height: 36px;
+          line-height: 34px;
+          &::after{
+            height: 4px;
+            width: 4px;
+          }
+          & .option{
+            line-height: 34px;
+            min-height: 34px;
+          }
+        }
+        & .list{
+          border: 1px solid  #C9F3FF;
+          width: 100%;
+          background-color: #fff;
+          border-radius: 5px;
+          box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+          box-sizing: border-box;
+          margin-top: 4px;
+          opacity: 0;
+          overflow: hidden;
+          padding: 0;
+          pointer-events: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          -webkit-transform-origin: 50% 0;
+          -ms-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+          -webkit-transform: scale(0.75) translateY(-21px);
+          -ms-transform: scale(0.75) translateY(-21px);
+          transform: scale(0.75) translateY(-21px);
+          -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+          transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+          z-index: 9;
+        }
+        & .option{
+          cursor: pointer;
+          font-weight: 400;
+          line-height: 40px;
+          list-style: none;
+          min-height: 40px;
+          outline: none;
+          padding-left: 18px;
+          padding-right: 29px;
+          text-align: left;
+          -webkit-transition: all 0.2s;
+          color: var(--rr-heading-primary);
+          transition: all 0.2s;
+          &:hover {
+            background-color: #f6f7f9;
+          }
+          &.selected{
+            font-weight: bold;
+          }
+          &.disabled{
+            background-color: transparent;
+            color: #999;
+            cursor: default;
+          }
+        }
+      }
+      .no-csspointerevents {
+        .nice-select {
+          .list {
+            display: none;
+          }
+          &.open {
+            .list {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    &-input {
+      margin-bottom: 20px;
+    }
+
+    input {
+      z-index: 2;
+      position: relative;
+      width: 100%;
+      padding: 21px 20px;
+      border: none;
+      height: 70px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      color: var(--rr-color-900)!important;
+      @include border-radius(30px !important);
+      background-color: var(--rr-color-100) !important;
+
+      @include rr-placeholder {
+        color: var(--rr-color-900)!important;
+      }
+    }
+
+    textarea {
+      border: none;
+      min-height: 199px;
+      padding: 20px;
+      @include border-radius(30px);
+      color: var(--rr-color-900)!important;
+      background-color: var(--rr-color-100) !important;
+      @media #{$xs} {
+        min-height: 150px;
+      }
+    }
+  }
+}

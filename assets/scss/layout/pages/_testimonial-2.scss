@@ -1,0 +1,92 @@
+@use '../../utils' as *;
+
+.testimonial-2 {
+  margin-top: -235px;
+
+  &__slider {
+    position: relative;
+    @include border-radius(30px);
+    background: var(--rr-common-white);
+    border-top: 8px solid var(--rr-theme-primary);
+    box-shadow: 0px 5px 60px rgba(0, 0, 0, 0.05);
+
+    &__arrow {
+      gap: 30px;
+      right: 127px;
+      bottom: 59px;
+      z-index: 2;
+      position: absolute;
+      @media  #{$sm} {
+        right: 50px;
+      }
+      @media  #{$xs} {
+        position: inherit;
+        right: inherit;
+        bottom: inherit;
+        justify-content: center;
+        padding-bottom: 40px;
+      }
+
+      &-next, &-prev {
+        svg {
+          @media #{$xs} {
+            max-width: 70px;
+          }
+        }
+        &:hover {
+          svg path[fill="#E4E5E5"] {
+            fill: var(--rr-theme-primary);
+          }
+          svg circle[stroke="#E4E5E5"] {
+            stroke: var(--rr-theme-primary);
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    padding: 60px 126px;
+
+    @media #{$lg} {
+      padding: 40px 100px;
+    }
+    @media #{$md, $sm} {
+      padding: 40px 60px;
+    }
+    @media #{$xs} {
+      padding: 30px;
+    }
+
+    &-content {
+
+      h3 {
+        font-style: normal;
+        font-weight: 400;
+        color: var(--rr-text-body);
+
+        @media  #{$xs} {
+          font-size: 20px;
+          line-height: 35px;
+        }
+      }
+    }
+
+    &-author {
+      margin-top: 58px;
+
+      @media #{$xs} {
+        margin-top: 30px;
+      }
+
+      h4 {
+        margin-bottom: 7px;
+
+        @media #{$xs} {
+          font-size: 22px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

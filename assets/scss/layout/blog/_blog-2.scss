@@ -1,0 +1,112 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.1 blog
+/*----------------------------------------*/
+
+.blog-2 {
+
+    &__space-top {
+        padding-top: 210px;
+
+        @media #{$md} {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        @media #{$sm,$xs} {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+    }
+
+    &__slider__arrow {
+        gap: 20px;
+
+        &-prev, &-next {
+            @include border-radius(500px);
+            width: 60px;
+            height: 60px;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 16px;
+            line-height: 16px;
+            color: var(--rr-theme-primary);
+            background-color: rgb(24 94 200 / 10%);
+
+            &:hover {
+                background-color: var(--rr-theme-primary);
+                color: var(--rr-common-white);
+            }
+        }
+    }
+
+    &__content {
+        max-width: 540px;
+
+        @media #{$xs, $sm, $md} {
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 60px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        @include border-radius(20px);
+        overflow: hidden;
+        background-color: var(--rr-common-white);
+
+        &-media {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-meta-list {
+            display: flex;
+            list-style: none;
+            gap: 10px 37px;
+
+            @media  #{$xs} {
+                flex-wrap: wrap;
+                gap: 10px 20px;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                color: var(--rr-color-900);
+
+                i {
+                    font-size: 12px;
+                    margin-right: 10px;
+                }
+
+                span {
+                    opacity: .7;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        color: var(--rr-theme-primary);
+                    }
+                }
+            }
+        }
+
+        &-content {
+            background-color: var(--rr-common-white);
+            padding: 20px 40px 40px;
+
+            @media #{$lg, $md, $sm, $xs} {
+                padding: 30px 25px;
+            }
+        }
+    }
+}
+

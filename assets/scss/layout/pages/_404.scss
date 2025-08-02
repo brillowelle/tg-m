@@ -1,0 +1,30 @@
+@use '../../utils' as *;
+
+.error {
+  &__content {
+      max-width: 520px;
+
+    @media #{$md, $sm, $xs} {
+      text-align: center;
+      max-width: 100%;
+    }
+
+      .title {
+        line-height: 230px;
+        color: transparent;
+        font-size: 210.833px;
+        text-transform: capitalize;
+        font-weight: var(--rr-fw-ebold);
+        -webkit-text-stroke: 3.83px #071C3C;
+
+        @media #{$sm} {
+          line-height: 171px;
+          font-size: 160.833px;
+        }
+        @media #{$xs} {
+          line-height: 150px;
+          font-size: 140.833px;
+        }
+      }
+  }
+}

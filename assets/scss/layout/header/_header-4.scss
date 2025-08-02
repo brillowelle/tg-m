@@ -1,0 +1,146 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4 header-common
+/*----------------------------------------*/
+.header-4 {
+
+	&__background {
+		background-color: var(--rr-theme-primary);
+	}
+
+	&-top {
+		margin-bottom: -39px;
+		background: var(--rr-theme-primary);
+		padding-bottom: 60px;
+		padding-top: 23px;
+
+		&__menu {
+			gap: 46px;
+
+			a {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				display: flex;
+				align-items: center;
+				line-height: 28px;
+				color: var(--rr-common-white);
+				position: relative;
+
+				&:hover {
+					color: var(--rr-theme-secondary);
+				}
+
+				&:after {
+					content: "";
+					left: -24px;
+					opacity: 0.5;
+					top: 0;
+					position: absolute;
+					width: 1px;
+					height: 26px;
+					background: var(--rr-common-white);
+				}
+
+				&:first-child {
+					&:after {
+						content: inherit;
+					}
+				}
+
+				i {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		&__menu-social {
+			gap: 24px;
+
+			a {
+				font-family: var(--rr-ff-fontawesome);
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 16px;
+				color: var(--rr-common-white);
+
+				&:hover {
+					color: var(--rr-theme-secondary);
+
+					svg path[fill="white"] {
+						fill: var(--rr-theme-secondary);
+					}
+				}
+			}
+		}
+	}
+
+	.header {
+
+		&__main {
+			padding-left: 40px;
+			padding-right: 60px;
+			position: relative;
+			z-index: 99;
+			background: var(--rr-common-white);
+			@include border-radius(20px);
+
+			@media #{$xs} {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			
+			.main-menu {
+
+				ul {
+					 li {
+						 @media (max-width:1199px) {
+							 &:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(5)) {
+								 display: none;
+							 }
+						 }
+					 }
+				}
+			}
+		}
+
+		&__hamburger {
+			.sidebar__toggle {
+				margin-left: 22px;
+				width: 54px;
+				height: 54px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid rgb(7 28 60 / 20%);
+				@include border-radius(500px);
+				color: var(--rr-color-900);
+
+				.bar-icon {
+					align-items: end;
+
+					span {
+						background: var(--rr-color-900);
+						&:nth-child(1) { width: 10.9px;}
+						&:nth-child(2) { width: 21.18px;}
+						&:nth-child(3) { width: 18px;}
+					}
+				}
+			}
+		}
+	}
+
+	.search-open-btn {
+		width: 54px;
+		height: 54px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid rgb(7 28 60 / 20%);
+		@include border-radius(500px);
+		color: var(--rr-color-900);
+		font-size: 20px;
+	}
+}

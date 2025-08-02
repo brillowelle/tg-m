@@ -1,0 +1,34 @@
+@use '../../utils' as *;
+
+.experience-2 {
+
+  &__bottom-up {
+    margin-bottom: -150px;
+  }
+
+  &__box {
+    z-index: 3;
+    position: relative;
+    padding: 99px 80px;
+    @include border-radius(20px);
+    overflow: hidden;
+    gap: 15px;
+
+    @media #{$sm} {
+      padding: 80px 50px;
+    }
+    @media #{$xs} {
+      padding: 50px 30px;
+    }
+  }
+
+  &__item {
+    gap: 20px;
+
+    &-text {
+      h2 {
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

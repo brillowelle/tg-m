@@ -1,0 +1,43 @@
+@use '../../utils' as *;
+
+.service-4 {
+
+    &__item {
+        padding: 40px;
+        @extend %rr-transition-3;
+        border: 1px solid #E4E5E5;
+        @include border-radius(20px);
+
+        @media #{$lg, $md, $sm, $xs} {
+            padding: 18px;
+        }
+
+        &-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include border-radius(20px);
+            background: rgb(24 94 200 / 10%);
+
+            img {
+                @extend %rr-transition-3;
+            }
+        }
+
+        &:hover {
+            border-color: #185EC8;
+
+            .rr-a-btn {
+                i {
+                    color: var(--rr-theme-primary);
+                }
+            }
+
+            .service-2__item-icon img {
+                @extend %hover-rotate-animation;
+            }
+        }
+    }
+}

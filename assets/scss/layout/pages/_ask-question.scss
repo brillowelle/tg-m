@@ -1,0 +1,85 @@
+@use '../../utils' as *;
+
+.ask-question {
+
+  &__content {
+    max-width: 540px;
+  }
+}
+
+.rr__faq {
+
+  .accordion-button {
+    font-size: var(--rr-fs-h5);
+    line-height: var(--rr-lh-h5);
+    color: var(--rr-heading-primary);
+    text-transform: capitalize;
+    font-weight: var(--rr-fw-bold);
+    background: var(--rr-common-white);
+    display: inline-block;
+    @include border-radius(20px);
+    padding: 20px 30px;
+    padding-right: 60px;
+
+    @media #{$xs} {
+      font-size: 15px;
+      line-height: 25px;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+    &:not(.collapsed) {
+      box-shadow: none;
+
+      &::after {
+        background: transparent;
+        content: "\f106";
+      }
+    }
+
+    &::after {
+      position: absolute;
+      @extend %rr-theme-br-500;
+      right: 30px;
+      content: "\f107";
+      background-image: none;
+      font-family: var(--rr-ff-fontawesome);
+      font-size: 16px;
+      top: calc(50% - 7px);
+      line-height: 29px;
+      font-weight: 900;
+      text-align: center;
+      color: var(--rr-theme-primary);
+      @extend %translateY1_2;
+    }
+  }
+
+  .accordion-body {
+    padding: 30px;
+    padding-top: 0;
+
+    > p {
+      max-width: 494px;
+      margin-bottom: 0;
+    }
+  }
+
+  .accordion-item {
+    overflow: hidden;
+    border: none;
+    margin-bottom: 30px;
+    @extend %rr-transition-3;
+    box-shadow: 0px 5px 60px rgba(0, 0, 0, 0.05);
+    @include border-radius(20px);
+
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:has(.collapse.show) {
+
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@use '../../utils' as *;
+
+.specialist-doctor {
+
+  &__slider {
+    max-width: 1760px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+  }
+
+    &__content  {
+        max-width: 630px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__item {
+        margin-top: 1px;
+        overflow: hidden;
+        @extend %rr-transition-3;
+        @include border-radius(20px);
+        border-top: 3px solid transparent;
+        background: var(--rr-common-white);
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+
+        &-media {
+          height: 370px;
+    
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+    
+        &-content {
+          padding:40px 20px 37px;
+          text-align: center;
+
+          &-text {
+            h4 {
+                margin-bottom: 7px;
+            }
+          }
+          &-share {
+              column-gap: 16px;
+              display: flex;
+              margin-top: 20px;
+              max-width: 145px;
+              margin-right: auto;
+              margin-left: auto;
+              align-items: center;
+              padding: 15.5px 21px;
+              justify-content: center;
+              border: 1px solid var(--rr-color-800);
+              @include border-radius(25px);
+  
+            a {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 110%;
+              color: var(--rr-color-900);
+              position: relative;
+
+              &:not(:last-child) {
+                padding-right: 16px;;
+
+                  &::before {
+                      content: "";
+                      width: 1px;
+                      height: 16px;
+                      top: 0px;
+                      right: 0;
+                      opacity: 0.2;
+                      position: absolute;
+                      border-right: 1px solid #071C3C;
+                  }
+              }
+
+              &:hover {
+                color: var(--rr-theme-primary);
+      
+                svg path[fill="#071C3C"] {
+                  fill: var(--rr-theme-primary);
+                }
+              }
+            }
+          }
+        }
+    
+        &:hover {
+            border-top: 3px solid var(--rr-theme-primary);
+        }
+    }
+
+    &__scrollbar {
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 1 !important;
+        background: rgba(1, 9, 21, 0.06);
+        width: 300px;
+        height: 10px;
+        background: #F2F7FD;
+        border-radius: 5px;
+        max-width: 100%;
+    
+    
+        .swiper-scrollbar-drag {
+          height: 100%;
+          background: var(--rr-theme-primary);
+        }
+    }
+}
