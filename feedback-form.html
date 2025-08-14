@@ -1,0 +1,463 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Majan-Eye-Centre</title>
+    <meta name="description" content="Majan Eye Care">
+    <meta name="author" content="Brillowelle">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/favicon.svg">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css">
+    <link rel="stylesheet" href="assets/css/vendor/spacing.css"> 
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Ajax script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="body-1">
+
+
+
+    <main>
+
+
+    <section class="pricing-appointment mt-5 mt-sm-40 mt-xs-30 mb-60">
+        <div class="container">
+            <div class="row align-items-center text-center mb-5">
+                <div class="">
+                    <div class="section__title-wrapper">
+                        <h5 class="section__subtitle color-theme-primary mb-15 mb-xs-10 title-animation">Give Your Feedback</h5>
+                        <!-- <h2 class="section__title mb-0 title-animation">Strengthen Your Vison With Us</h2> -->
+                        <img src="assets/imgs/majaan-logo.png" alt="" height="100px">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Contact Form -->
+                <div class="col-lg-12">
+                    <form id="gform"  method="" action="" class="pricing-appointment__form feedback mt-md-60 mt-sm-60 mt-xs-60">
+                        <h4 class="text-center section__title mb-15 title-animation">Majan Eye Centre – Patient Feedback Form</h4>
+                        <h4 class="text-center section__title mb-15 title-animation">نموذج تقييم المرضى – مركز مجان للعيون</h4>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="pricing-appointment__form-input">
+                                    <input name="name" id="name" type="text" placeholder="Your name ( الاسم )" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="pricing-appointment__form-input">
+                                    <input name="date" id="date" type="text" placeholder="Date ( التاريخ )" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="pricing-appointment__form-input">
+                                    <input name="mr-no" id="mr_no" type="number" placeholder="Mr No" required>
+                                </div>
+                            </div><br><br>
+                            <div class="col-md-12 col-sm-12 mt-5">
+                                <div class="pricing-appointment__form-input text-center">
+                                    <label for="">Service from the Front Desk ( خدمة موظفي الاستقبال )</label>
+                                    <div class="star-rating" data-target="frontdesk_service">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                    <input type="hidden" name="frontdesk_service" id="frontdesk_service" required>
+                                    <!-- <input name="FrontD-Service" id="frontdesk_service" type="number" placeholder="⭐1⭐2⭐3⭐4⭐5" min="0" max="5" required> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 mt-5">
+                                <div class="pricing-appointment__form-input text-center">
+                                    <label for="">Service From Optometrist ( خدمة أخصائي البصريات )</label>
+                                    <div class="star-rating" data-target="optometrist_service">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                    <input type="hidden" name="optometrist_service" id="optometrist_service" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="pricing-appointment__form-input text-center">
+                                    <label for="">Nursing Service ( خدمة التمريض )</label>
+                                    <div class="star-rating" data-target="nurse_services">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                    <input type="hidden" name="nurse_services" id="nurse_services" required>
+                                    <!-- <input name="Nursing-service" id="nurse_services" type="number" placeholder="⭐1⭐2⭐3⭐4⭐5" min="0" max="5" required> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="pricing-appointment__form-input text-center">
+                                    <label for="">Doctor’s Care ( تعامل الطبيب )</label>
+                                    <div class="star-rating" data-target="dr_care">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                    <input type="hidden" name="dr_care" id="dr_care" required>
+                                    <!-- <input name="Dr-dr_care" id="dr_care" type="number" placeholder="⭐1⭐2⭐3⭐4⭐5" min="0" max="5" required> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 ">
+                                <div class="pricing-appointment__form-input text-center">
+                                    <label for="">Conselling Service ( خدمة الاستشارات )</label>
+                                    <div class="star-rating" data-target="consulling_service">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                    <input type="hidden" name="consulling_service" id="consulling_service" required>
+                                    <!-- <input name="overall-experience" id="exp" type="number" placeholder="⭐1⭐2⭐3⭐4⭐5" min="0" max="5" required> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="pricing-appointment__form-input text-center">
+                                    <label for="">Rate the Explanation by the doctor / staff about your Condition & Treatment ( وضوح شرح الحالة والعلاج )</label>
+                                    <div class="star-rating" data-target="explanation">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                    <input type="hidden" name="explanation" id="explanation" required>
+                                    <!-- <input name="Explanations-of-Dr/staff" id="explanation" type="number" placeholder="⭐1⭐2⭐3⭐4⭐5" min="0" max="5" required> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="pricing-appointment__form-input text-center">
+                                    <label for="">Staff Friendliness ( ودّ وتعامل الموظفين )</label>
+                                    <div class="star-rating" data-target="staff_friendliness">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                    <input type="hidden" name="staff_friendliness" id="staff_friendliness" required>
+                                    <!-- <input name="staff_friendliness-friendliness" id="staff_friendliness" type="number" placeholder="⭐1⭐2⭐3⭐4⭐5" min="0" max="5" required> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="pricing-appointment__form-input text-center">
+                                    <label for="">Cleanliness of the Clinic ( نظافة العيادة )</label>
+                                    <div class="star-rating" data-target="cleanliness">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                    <input type="hidden" name="cleanliness" id="cleanliness" required>
+                                    <!-- <input name="Cleanliness" id="cleanliness" type="number" placeholder="⭐1⭐2⭐3⭐4⭐5" min="0" max="5" required> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 ">
+                                <div class="pricing-appointment__form-input text-center">
+                                    <label for="">Overall Experience ( التجربة العامة )</label>
+                                    <div class="star-rating" data-target="overall_experience">
+                                        <span class="star" data-value="1">★</span>
+                                        <span class="star" data-value="2">★</span>
+                                        <span class="star" data-value="3">★</span>
+                                        <span class="star" data-value="4">★</span>
+                                        <span class="star" data-value="5">★</span>
+                                    </div>
+                                    <input type="hidden" name="overall_experience" id="overall_experience" required>
+                                    <!-- <input name="overall-overall_experienceerience" id="overall_experience" type="number" placeholder="⭐1⭐2⭐3⭐4⭐5" min="0" max="5" required> -->
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="pricing-appointment__form-input text-center">
+                                    <label for="">Would you recommend Majan Eye Centre to others? <br> ( هل تنصح بمركز مجان للعيون للآخرين؟ )</label>
+                                    <div class="pricing-appointment__form-select">
+                                        <label style="margin-right: 10px;">
+                                            <input type="radio" name="recommend" value="Yes" required> Yes
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="recommend" value="No" required> No
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12">
+                                <div class="pricing-appointment__form-input text-center">
+                                    <label for="">How do you know about majaan?</label>
+                                    <div class="pricing-appointment__form-select mt-5">
+                                        <label style="margin-right: 10px; font-weight: 500; font-size: 20px;">
+                                            <input type="radio" name="know-abt" value="Social Media" required style="width: 100% !important; height: 25px !important;">Social Media</label>
+                                        <label style="font-weight: 500; font-size: 20px;">
+                                            <input type="radio" name="know-abt" value="Friends/Family" required style="width: 100% !important; height: 25px !important;"> Friends/Family </label>
+                                        <label style="font-weight: 500; font-size: 20px;">
+                                            <input type="radio" name="know-abt" value="Camp" required style="width: 100% !important; height: 25px !important;"> Camp </label>
+                                        <label style="font-weight: 500; font-size: 20px;">
+                                            <input type="radio" name="know-abt" value="Others" required style="width: 100% !important; height: 25px !important;"> Others </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="pricing-appointment__form-input">
+                                    <textarea name="stood-out-on-visit" id="stood_out" placeholder="Was there a staff member who stood out during your visit?"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="pricing-appointment__form-input">
+                                    <textarea name="advice-for-improve" id="advice" placeholder="Any advice for us to improve further."></textarea>
+                                </div>
+                            </div>
+                            
+
+                            <div class="col-12 text-center">
+                                <button type="submit" class="rr-btn rr-btn__primary-color mt-0">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">Send Now<i class="fa-solid fa-paper-plane-top"></i></span>
+                                        <span class="text-two">Send Now<i class="fa-solid fa-paper-plane-top"></i></span>
+                                    </span>
+                                </button>
+                                <p id="submit-alert" class="mt-3"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- JS here -->
+     <script>
+        // Star hover effect: highlight stars up to hovered one in gold
+        $(document).on('mouseenter', '.star-rating .star', function () {
+            var value = $(this).data('value');
+            var wrapper = $(this).closest('.star-rating');
+            wrapper.find('.star').each(function () {
+                if ($(this).data('value') <= value) {
+                    $(this).addClass('gold');
+                } else {
+                    $(this).removeClass('gold');
+                }
+            });
+        });
+        $(document).on('mouseleave', '.star-rating', function () {
+            $(this).find('.star').removeClass('gold');
+        });
+
+        // Star click selection
+        $(".star-rating span").on("click", function () {
+            const value = $(this).data("value");
+            const wrapper = $(this).closest(".star-rating");
+            const inputId = wrapper.data("target");
+
+            // Highlight stars up to the clicked one
+            wrapper.find("span").removeClass("selected");
+            wrapper.find("span").each(function () {
+                if ($(this).data("value") <= value) {
+                    $(this).addClass("selected");
+                }
+            });
+
+            // Set hidden input value
+            $("#" + inputId).val(value);
+        });
+    </script>
+    <script>
+        // Offline queue and sync logic
+        const ENDPOINT = "https://script.google.com/macros/s/AKfycbyWUilkMzUAxu-bGQSICCCTjtRhJx5Agb4ctMhXNzRP334d9r3l4fuJI94Pr0ts6cFspQ/exec";
+        const STORAGE_KEY = "offline_feedback_queue";
+        const SYNCED_KEY = "offline_feedback_synced";
+
+        function generateLocalID() {
+            return 'local_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        function saveOffline(data) {
+            if (!data._local_id) {
+                data._local_id = generateLocalID();
+            }
+            let queue = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+            queue.push(data);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(queue));
+        }
+
+        function sendToServer(data, callback) {
+            // Do not send _local_id to server
+            let sendData = Object.assign({}, data);
+            delete sendData._local_id;
+            $.ajax({
+                url: ENDPOINT,
+                data: sendData,
+                method: "POST",
+                success: function (response) {
+                    callback(true);
+                },
+                error: function () {
+                    callback(false);
+                }
+            });
+        }
+
+        // Fade out both form and message, then reset and fade in
+        function fadeOutFormAndMessage() {
+            $("#gform, #submit-alert").fadeOut(500, function () {
+                $('#gform')[0].reset();
+                $(".star-rating span").removeClass("selected");
+                $("#submit-alert").text("");
+                $("#gform, #submit-alert").fadeIn(500);
+            });
+        }
+
+        $("#gform").submit(function (e) {
+            e.preventDefault();
+
+            // Validate all star ratings
+            const requiredRatings = [
+                "#overall_experience",
+                "#dr_care",
+                '#optometrist_service',
+                "#frontdesk_service",
+                "#consulling_service",
+                "#cleanliness",
+                "#staff_friendliness",
+                "#nurse_services",
+                "#explanation",
+            ];
+
+            let allStarsSelected = true;
+            requiredRatings.forEach(id => {
+                if (!$(id).val()) {
+                    allStarsSelected = false;
+                    $(`div[data-target='${id.replace("#", "")}']`).addClass("rating-error");
+                } else {
+                    $(`div[data-target='${id.replace("#", "")}']`).removeClass("rating-error");
+                }
+            });
+
+            const recommendValue = $('input[name="recommend"]:checked').val();
+            if (!recommendValue) {
+                $("#submit-alert").text("Please select Yes or No for recommendation.").css({ color: "red", "font-weight": "900" });
+                return;
+            }
+
+            const knowAbtValue = $('input[name="know-abt"]:checked').val();
+            if (!knowAbtValue) {
+                $("#submit-alert").text("Please select how you know about Majaan.").css({ color: "red", "font-weight": "900" });
+                return;
+            }
+
+            if (!allStarsSelected) {
+                $("#submit-alert").text("Please rate all fields before submitting.").css({ color: "red", "font-weight": "900" });
+                return;
+            }
+
+            // Show submitting status immediately
+            $("#submit-alert").text("Submitting...Please Wait!").css({ color: "#0288d1", "font-weight": "900" });
+
+            const formData = {
+                name: $("#name").val(),
+                date: $("#date").val(),
+                mr_no: $("#mr_no").val(),
+                overall_experience: $("#overall_experience").val(),
+                consulling_service: $("#consulling_service").val(),
+                dr_care: $("#dr_care").val(),
+                optometrist_service: $("#optometrist_service").val(),
+                frontdesk_service: $("#frontdesk_service").val(),
+                cleanliness: $("#cleanliness").val(),
+                staff_friendliness: $("#staff_friendliness").val(),
+                nurse_services: $("#nurse_services").val(),
+                explanation: $("#explanation").val(),
+                recommend: recommendValue,
+                know_abt: knowAbtValue,
+                stood_out: $("#stood_out").val(),
+                advice: $("#advice").val(),
+                formGoogleSheetName: "responses",
+                formGoogleSendEmail: "mnkv1013@gmail.com",
+                formDataNameOrder: JSON.stringify([
+                    "name", "date", "mr_no", "overall_experience", "dr_care", "consulling_service", "frontdesk_service",
+                    "optometrist_service", "cleanliness", "staff_friendliness", "nurse_services", "explanation",
+                    "recommend", "know_abt", "stood_out", "advice"
+                ])
+            };
+
+            if (!formData._local_id) {
+                formData._local_id = generateLocalID();
+            }
+
+            if (navigator.onLine) {
+                sendToServer(formData, function (success) {
+                    if (success) {
+                        $("#submit-alert").text("Feedback submitted! ✅").css({ "color": "#50b948", "font-weight": "900" });
+                    } else {
+                        saveOffline(formData);
+                        $("#submit-alert").text("Connection error. Saved offline! ⚠️").css({ color: "orange", "font-weight": "900" });
+                    }
+                    setTimeout(fadeOutFormAndMessage, 3000);
+                });
+            } else {
+                saveOffline(formData);
+                $("#submit-alert").text("No internet. Saved offline! ⚠️").css({ color: "orange", "font-weight": "900" });
+                setTimeout(fadeOutFormAndMessage, 3000);
+            }
+        });
+
+        // Retry unsent offline data every 5 seconds, no duplicates
+        setInterval(function () {
+            if (navigator.onLine) {
+                let queue = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+                let syncedIds = JSON.parse(localStorage.getItem(SYNCED_KEY)) || [];
+                let unsyncedQueue = queue.filter(item => !syncedIds.includes(item._local_id));
+
+                if (unsyncedQueue.length > 0) {
+                    const next = unsyncedQueue[0];
+                    sendToServer(next, function (success) {
+                        if (success) {
+                            // Mark as synced
+                            syncedIds.push(next._local_id);
+                            localStorage.setItem(SYNCED_KEY, JSON.stringify(syncedIds));
+                            // Remove from queue
+                            let newQueue = queue.filter(item => item._local_id !== next._local_id);
+                            localStorage.setItem(STORAGE_KEY, JSON.stringify(newQueue));
+                            $("#submit-alert").text("Offline feedback synced ✅").css({ color: "#50b948", "font-weight": "900" });
+                        } else {
+                            // Keep in queue for future retries
+                        }
+                    });
+                }
+            }
+        }, 5000);
+    </script>
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/plugins/waypoints.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/vendor/type.js"></script>
+    <script src="assets/js/vendor/jquery.appear.js"></script>
+    <script src="assets/js/plugins/gsap.min.js"></script>
+    <script src="assets/js/plugins/SplitText.js"></script>
+    <script src="assets/js/plugins/smoothscroll.js"></script>
+    <script src="assets/js/vendor/ajax-form.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+</body>
+
+</html>
