@@ -4586,8 +4586,8 @@ body .ui-tooltip {
   box-shadow: none;
 }
 .header-1.rr-sticky {
-  -webkit-box-shadow: 0px 2px 4px rgba(29, 29, 29, 0.14);
-          box-shadow: 0px 2px 4px rgba(29, 29, 29, 0.14);
+  -webkit-box-shadow: 0px 3px 20px rgb(80 185 72 / 70%);
+          box-shadow: 0px 3px 20px rgb(80 185 72 / 70%);
 }
 @media (max-width: 1199px) {
   .header-1 .header__main .main-menu ul li:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(5)) {
