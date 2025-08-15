@@ -59,7 +59,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="pricing-appointment__form-input">
-                                    <input name="mr-no" id="mr_no" type="number" placeholder="Mr No" required>
+                                    <input name="mobile_no" id="mobile_no" type="number" placeholder="MObile No" required>
                                 </div>
                             </div><br><br>
                             <div class="col-md-12 col-sm-12 mt-5">
@@ -377,7 +377,7 @@
             const formData = {
                 name: $("#name").val(),
                 date: $("#date").val(),
-                mr_no: $("#mr_no").val(),
+                mobile_no: $("#mobile_no").val(),
                 overall_experience: $("#overall_experience").val(),
                 consulling_service: $("#consulling_service").val(),
                 dr_care: $("#dr_care").val(),
@@ -394,7 +394,7 @@
                 formGoogleSheetName: "responses",
                 formGoogleSendEmail: "mnkv1013@gmail.com",
                 formDataNameOrder: JSON.stringify([
-                    "name", "date", "mr_no", "overall_experience", "dr_care", "consulling_service", "frontdesk_service",
+                    "name", "date", "mobile_no", "overall_experience", "dr_care", "consulling_service", "frontdesk_service",
                     "optometrist_service", "cleanliness", "staff_friendliness", "nurse_services", "explanation",
                     "recommend", "know_abt", "stood_out", "advice"
                 ])
