@@ -64,13 +64,13 @@
     <!-- Offcanvas area start -->
 
     <!-- Whatsapp-Btn -->
-    <!-- <div class="wh-api">
+    <div class="wh-api">
         <div class="wh-fixed whatsapp-pulse">
-            <a href="https://wa.me/+96890914123?text=Hi" target="_blank">
+            <a href="https://wa.me/+96891774829?text=Hi" target="_blank">
                 <button class="wh-ap-btn"></button>
             </a>
         </div>
-    </div> -->
+    </div>
     <!-- Header area start -->
     <header>
         <div id="header-sticky" class="header__area arb header-1">
@@ -278,7 +278,9 @@
                                             <span class="text-two">أرسل الآن<i class="fa-solid fa-paper-plane-top fa-flip-horizontal"></i></span>
                                         </span>
                                     </button>
-                                    <p id="submit-alert"></p>
+                                    <div class="mt-3 text-end" dir="ltr">
+                                        <p id="submit-alert" ></p>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -424,22 +426,29 @@
 
     <!-- JS here -->
     <script>
-        // Form submission using AJAX
-        $("#gform").submit((e)=>{
-            e.preventDefault()
+        $("#gform").submit((e) => {
+            e.preventDefault();
+            // Doctor field validation
+            if (!$('#doctor').val()) {
+                $('#submit-alert').text('Please select a doctor before submitting!').css({"display":"contents", "color": "red", "font-weight": "900"});
+                return;
+            }
+            $("#submit-alert").html("Submitting...<br>Please wait, your request is being processed.").css({ "display": "contents", "color": "#0288d1", "font-weight": "900" });
+
             $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbx68ZBJluLdS2mTa0OcsQVhC-qEvjklleyXKTYPX3kujHkUhN-1NxBeV9w_azK2oBMo/exec",
-                data:$("#gform").serialize(),
-                method:"post",
+                url: "https://script.google.com/macros/s/AKfycbzK-qOLnxlMq6S7LhlfRepqll4jQo-GCweZeWVBoTOw77gY9F162Om-VndPkCI6JjM0/exec",
+                data: $("#gform").serialize(),
+                method: "post",
                 success: function(response) {
-                    $("#submit-alert").text("Form Submitted Successfully!!").css({"display":"contents", "color": "#50b948", "font-weight": "900"});
-                    setTimeout(() => window.location.reload(), 10000); // Reload after 10 seconds
+                    $("#submit-alert").text("Form Submitted Successfully!!").css({ "display": "contents", "color": "#50b948", "font-weight": "900" });
+                    setTimeout(() => window.location.reload(), 5000); // Reload after 5 seconds (you can adjust)
                 },
                 error: function(err) {
-                    $("#submit-alert").text("Something Went Wrong!..Check filled details are correct and Submit again or Please try Contacting through WhatsApp or Mobile Number").css({"display":"contents", "color": "red", "font-weight": "900"});
+                    $("#submit-alert").text("Something Went Wrong!..Check filled details are correct and Submit again or Please try Contacting through WhatsApp or Mobile Number")
+                        .css({ "display": "contents", "color": "red", "font-weight": "900" });
                 }
-            })
-        })
+            });
+        });
     </script>
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="assets/js/plugins/waypoints.min.js"></script>
