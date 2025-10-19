@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Book an Appointment | Majan-Eye-Centre</title>
-    <meta name="description" content="Majan Eye Care">
+    <meta name="description" content="Schedule your eye checkup or consultation online at Majan Eye Center. Choose your doctor and preferred date. Book now for quality eye care!">
     <meta name="author" content="Brillowelle">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
@@ -192,6 +192,7 @@
                     <div class="">
                         <div class="section__title-wrapper">
                             <h5 class="section__subtitle color-theme-primary mb-15 mb-xs-10 title-animation"><img src="assets/imgs/icons/heart.png" alt="icon not found" class="img-fluid">Book Your Appointment</h5>
+                            <h4 class="section__title mb-0 title-animation">Use the form below to book your appointment online. Our team will confirm your slot shortly.</h4>
                         </div>
                     </div>
     
@@ -456,7 +457,7 @@
                 data: $("#gform").serialize(),
                 method: "post",
                 success: function(response) {
-                    $("#submit-alert").text("Form Submitted Successfully!!").css({ "display": "contents", "color": "#50b948", "font-weight": "900" });
+                    $("#submit-alert").text("Thank you! Your appointment request has been submitted!!").css({ "display": "contents", "color": "#50b948", "font-weight": "900" });
 
                     // Prepare WhatsApp message and open in new tab/window. We use the previously opened window (waWin)
                     var waNumber = '96891774829'; // Oman number without +
