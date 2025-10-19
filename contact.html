@@ -368,7 +368,7 @@
                                     <li><a href="services.html">Glaucoma Clinic</a></li>
                                     <li><a href="services.html">Paediatric Ophthalmology Clinic</a></li>
                                     <li><a href="services.html">Oculoplastic Clinic</a></li>
-                                    <li><a href="services.html">Contact Lens/Keratoconus Clinic</a></li>
+                                    <li><a href="services.html">Keratoconus Clinic</a></li>
                                     <li><a href="services.html">Retina Clinic</a></li>
                                 </ul>
                             </div>
@@ -433,22 +433,6 @@
 
     <!-- JS here -->
     <script>
-        // Form submission using AJAX
-        // $("#gform").submit((e)=>{
-        //     e.preventDefault()
-        //     $.ajax({
-        //         url:"https://script.google.com/macros/s/AKfycbybtA9T1MiDLAccn1gVWjMxXBvpsleiTYOje_0ZEWxFqudKBG9CoUHsRenqLo6XDWI/exec",
-        //         data:$("#gform").serialize(),
-        //         method:"post",
-        //         success: function(response) {
-        //             $("#submit-alert").text("Form Submitted Successfully!!").css({"display":"contents", "color": "#50b948", "font-weight": "900"});
-        //             setTimeout(() => window.location.reload(), 10000);
-        //         },
-        //         error: function(err) {
-        //             $("#submit-alert").text("Something Went Wrong!..Check filled details are correct and Submit again or Please try Contacting through WhatsApp or Mobile Number").css({"display":"contents", "color": "red", "font-weight": "900"});
-        //         }
-        //     })
-        // })
         $("#gform").submit((e) => {
             e.preventDefault();
             // Doctor field validation
@@ -464,6 +448,25 @@
                 method: "post",
                 success: function(response) {
                     $("#submit-alert").text("Form Submitted Successfully!!").css({ "display": "contents", "color": "#50b948", "font-weight": "900" });
+
+                    // Prepare WhatsApp message and open in new tab/window. We use the previously opened window (waWin)
+                    var waNumber = '96891774829'; // Oman number without +
+                    var waMessage = 'New contact request from website:\n';
+                    waMessage += 'Name: ' + ($('#name').val() || '-') + '\n';
+                    waMessage += 'Email: ' + ($('#email').val() || '-') + '\n';
+                    waMessage += 'Phone: ' + ($('#phone').val() || '-') + '\n';
+                    waMessage += 'Doctor: ' + ($('#doctor').val() || '-') + '\n';
+                    waMessage += 'Message: ' + ($('#message').val() || '-');
+                    var waUrl = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(waMessage);
+
+                    // Redirect current tab to WhatsApp (same tab navigation)
+                    try {
+                        window.location.href = waUrl;
+                    } catch (err) {
+                        // If navigation fails for any reason, show a clickable link
+                        $('#submit-alert').append('<br><a href="' + waUrl + '" target="_blank">Open WhatsApp</a>');
+                    }
+
                     setTimeout(() => window.location.reload(), 5000); // Reload after 5 seconds (you can adjust)
                 },
                 error: function(err) {
