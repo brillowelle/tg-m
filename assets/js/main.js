@@ -58,7 +58,7 @@
                     }, 1000); // 1000 milliseconds delay (1 second)
                 },
                 {
-                    offset: "95%",
+                    offset: "100%",
                     triggerOnce: true,
                 }
             );
@@ -116,8 +116,25 @@
             text.revert();
             gsap.set(".home-hero__actions .rr-btn, .home-hero__media, .home-hero__media img, .home-hero__stats, .home-hero__stat, .home-hero__stat-icon", { clearProps: "all" });
             hero.classList.add("is-animated");
+            // Counter trigger points were measured while the strip was still offset
+            if (typeof Waypoint !== "undefined") Waypoint.refreshAll();
         }
         window.addEventListener("resize", finish);
+    })();
+
+    /*======================================
+      Home Services Reveal
+      ========================================*/
+    (function () {
+        const grid = document.querySelector(".home-services__grid");
+        if (!grid || !("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        grid.classList.add("is-waiting");
+        new IntersectionObserver(function (entries, observer) {
+            if (!entries[0].isIntersecting) return;
+            grid.classList.replace("is-waiting", "is-inview");
+            observer.disconnect();
+        }, { threshold: 0.12 }).observe(grid);
     })();
 
     /*======================================
