@@ -128,13 +128,43 @@
     (function () {
         if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-        document.querySelectorAll(".home-services__grid, .home-why__list").forEach(function (grid) {
+        document.querySelectorAll(".home-services__grid, .home-why__list, .home-team__grid, .home-tech__grid").forEach(function (grid) {
             grid.classList.add("is-waiting");
             new IntersectionObserver(function (entries, observer) {
                 if (!entries[0].isIntersecting) return;
                 grid.classList.replace("is-waiting", "is-inview");
                 observer.disconnect();
             }, { threshold: 0.12 }).observe(grid);
+        });
+    })();
+
+    /*======================================
+      Footer Pointer Light
+      ========================================*/
+    (function () {
+        const footer = document.querySelector(".footer-3__area-common");
+        if (!footer || !window.matchMedia("(hover: hover) and (pointer: fine)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        const light = document.createElement("span");
+        light.className = "footer-fx";
+        light.setAttribute("aria-hidden", "true");
+        footer.prepend(light);
+
+        let frame = 0;
+        footer.addEventListener("pointermove", function (event) {
+            if (frame) return;
+            frame = requestAnimationFrame(function () {
+                frame = 0;
+                const box = footer.getBoundingClientRect();
+                const x = event.clientX - box.left;
+                const y = event.clientY - box.top;
+                footer.style.setProperty("--fx-x", x + "px");
+                footer.style.setProperty("--fx-y", y + "px");
+                footer.classList.add("is-lit");
+            });
+        });
+        footer.addEventListener("pointerleave", function () {
+            footer.classList.remove("is-lit");
         });
     })();
 
@@ -185,52 +215,32 @@
     });
 
     /*client-testimonial__slider***/
-    let clienttestimonial__slider = new Swiper(".client-testimonial__slider", {
-        slidesPerView: 2,
-        spaceBetween: 30,
-        loop: true,
-        clickable: true,
-        autoplay: {
-            delay: 3000,
-        },
-         // Responsive breakpoints
-        breakpoints: {
-            1200: {
-                slidesPerView: 2,
+    document.querySelectorAll(".client-testimonial__slider").forEach(function (slider) {
+        new Swiper(slider, {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                // dots only where the section is styled for them
+                el: slider.closest(".home-reviews") ? slider.querySelector(".client-testimonial__slider-dot") : null,
+                clickable: true,
             },
-            768: {
-                slidesPerView: 2,
+            autoplay: {
+                delay: 3000,
             },
-            0: {
-                slidesPerView: 1,
+             // Responsive breakpoints
+            breakpoints: {
+                1200: {
+                    slidesPerView: Number(slider.dataset.perView) || 2,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
             },
-        },
-    });
-
-    /*doctor__slider***/
-    let doctor__slider = new Swiper(".doctor__slider", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        clickable: true,
-        pagination: {
-            el: ".doctor__slider-dot",
-            clickable: true,
-        },
-        autoplay: {
-            delay: 3000,
-        },
-        breakpoints: {
-            1200: {
-                slidesPerView: 3,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            0: {
-                slidesPerView: 1,
-            },
-        },
+        });
     });
 
     $('.pricing-appointment__form-select select').niceSelect();
