@@ -1,16 +1,5 @@
 (function ($) {
     "use strict";
-
-    /*-----------------------------------------------------------------------------------
-        Template Name: Medilix - Healthcare & Medical Bootstrap HTML5 Template
-        Author: RRDevs
-        Support: https://support.rrdevs.net
-        Description: Medilix - Healthcare & Medical Bootstrap HTML5 Template.
-        Version: 1.0
-        Developer: Sabbir Ahmmed (https://github.com/ahmmedsabbirbd)
-    -----------------------------------------------------------------------------------
-
-     */
    /*======================================
    Data Css js
    ========================================*/
@@ -62,17 +51,14 @@
         static LoadedAfter() {
             $(".odometer").waypoint(
                 function () {
-                    var odo = $(".odometer");
-                    odo.each(function () {
-                        var countNumber = $(this).attr("data-count");
-                        var element = $(this);
-                        setTimeout(function() {
-                            element.html(countNumber);
-                        }, 1000); // 1000 milliseconds delay (1 second)
-                    });
+                    var element = $(this.element);
+                    var countNumber = element.attr("data-count");
+                    setTimeout(function() {
+                        element.html(countNumber);
+                    }, 1000); // 1000 milliseconds delay (1 second)
                 },
                 {
-                    offset: "80%",
+                    offset: "95%",
                     triggerOnce: true,
                 }
             );
@@ -87,6 +73,52 @@
     window.addEventListener('resize', function() {
         gsap.globalTimeline.clear();
     });
+
+    /*======================================
+      Home Hero Animation
+      ========================================*/
+    (function () {
+        const hero = document.querySelector(".home-hero");
+        if (!hero) return;
+
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        // After 3s the CSS fallback has already shown the hero, so don't hide it again
+        if (reduceMotion || performance.now() > 3000 || typeof gsap === "undefined" || typeof SplitText === "undefined") {
+            hero.classList.add("is-ready", "is-animated");
+            return;
+        }
+
+        const title = new SplitText(hero.querySelector(".home-hero__title"), { type: "words" });
+        const text = new SplitText(hero.querySelector(".home-hero__text"), { type: "words" });
+        title.words.forEach(function (word) {
+            const mask = document.createElement("div");
+            mask.className = "home-hero__mask";
+            word.parentNode.insertBefore(mask, word);
+            mask.appendChild(word);
+        });
+        hero.classList.add("is-ready");
+
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" }, onComplete: finish });
+        tl.from(title.words, { yPercent: 115, duration: 0.9, stagger: 0.07, ease: "power4.out" })
+            .from(text.words, { y: 14, opacity: 0, duration: 0.6, stagger: 0.025 }, 0.4)
+            .from(".home-hero__actions .rr-btn", { y: 24, opacity: 0, duration: 0.6, stagger: 0.12 }, 0.8)
+            .from(".home-hero__media", { scale: 0.92, opacity: 0, duration: 1 }, 0.2)
+            .from(".home-hero__media img", { y: 50, opacity: 0, duration: 1.1 }, 0.45)
+            .from(".home-hero__stats", { y: 40, opacity: 0, duration: 0.8 }, 0.9)
+            .from(".home-hero__stat", { y: 16, opacity: 0, duration: 0.5, stagger: 0.1 }, 1.1)
+            .from(".home-hero__stat-icon", { scale: 0.4, opacity: 0, duration: 0.6, stagger: 0.1, ease: "back.out(2)" }, 1.15);
+
+        // Restores the original markup and hands hover/idle motion back to CSS
+        function finish() {
+            if (hero.classList.contains("is-animated")) return;
+            tl.kill();
+            title.revert();
+            text.revert();
+            gsap.set(".home-hero__actions .rr-btn, .home-hero__media, .home-hero__media img, .home-hero__stats, .home-hero__stat, .home-hero__stat-icon", { clearProps: "all" });
+            hero.classList.add("is-animated");
+        }
+        window.addEventListener("resize", finish);
+    })();
 
     /*======================================
       Mobile Menu Js

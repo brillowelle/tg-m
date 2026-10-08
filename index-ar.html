@@ -159,30 +159,73 @@
 
     <main>
         <!-- Banner area start -->
-        <section class="index-banner index-banner__space hero-gradient overflow-hidden" >
+        <section class="home-hero">
+            <div class="home-hero__bg" aria-hidden="true">
+                <span class="home-hero__orb home-hero__orb--1"></span>
+                <span class="home-hero__orb home-hero__orb--2"></span>
+                <span class="home-hero__orb home-hero__orb--3"></span>
+                <span class="home-hero__rings"></span>
+                <span class="home-hero__plus home-hero__plus--1"></span>
+                <span class="home-hero__plus home-hero__plus--2"></span>
+            </div>
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7">
-                        <div class="index-banner__content ara">
-                            <h1 class="mb-50 mb-xs-40 color-white title-animation">رؤيتك المشرقة هي وعدنا لك</h1>
-                            <h4><b>  مركز مجان للعيون الرائد يرحب بكم  في سلطنة عُمان.
-                                رؤية يمكنك الوثوق بها. رعاية يمكنك الشعور بها
-                                </b></h4>
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="home-hero__content">
+                            <h1 class="home-hero__title">رعاية متقدمة للعيون في عُمان <span>لرؤية أوضح وأكثر صحة</span></h1>
+                            <p class="home-hero__text">رعاية شاملة للعيون وتشخيص وعلاجات متقدمة يقدّمها أطباء عيون ذوو خبرة باستخدام أحدث التقنيات.</p>
 
-                            <div class="rr-btn__wrapper d-flex align-items-sm-center align-items-start flex-column flex-sm-row">
-                                <a href="services-ar.html" class="rr-btn position-relative overflow-hidden">
-                                    <div class="panel wow"></div>
+                            <div class="home-hero__actions">
+                                <a href="bookings.html" class="rr-btn">
                                     <span class="btn-wrap">
-                                        <span class="text-one">خدماتنا&nbsp; <i class="fa-solid fa-chevrons-left"></i> </span> 
-                                        <span class="text-two">خدماتنا&nbsp; <i class="fa-solid fa-chevrons-left"></i> </span>
+                                        <span class="text-one">احجز موعداً<i class="fa-solid fa-calendar-check"></i></span>
+                                        <span class="text-two">احجز موعداً<i class="fa-solid fa-calendar-check"></i></span>
                                     </span>
                                 </a>
-
+                                <a href="services-ar.html" class="rr-btn rr-btn__transparent">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">استكشف خدماتنا<i class="fa-solid fa-arrow-left"></i></span>
+                                        <span class="text-two">استكشف خدماتنا<i class="fa-solid fa-arrow-left"></i></span>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="hero-img arb">
-                        <img class="img-ofluid" src="assets/imgs/banner/majan-hero.png" alt="icon not found">
+                    <div class="col-lg-6">
+                        <div class="home-hero__media">
+                            <img src="assets/imgs/banner/majan-hero.png" alt="مبنى مركز مجان للعيون في بركاء، سلطنة عُمان" width="738" height="573">                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder figures: replace data-count values with confirmed numbers -->
+                <div class="home-hero__stats">
+                    <div class="home-hero__stat">
+                        <span class="home-hero__stat-icon"><i class="fa-solid fa-award"></i></span>
+                        <div>
+                            <span class="home-hero__stat-num"><span class="odometer" data-count="15" dir="ltr">0</span>+</span>
+                            <span class="home-hero__stat-label">سنوات من الرعاية</span>
+                        </div>
+                    </div>
+                    <div class="home-hero__stat">
+                        <span class="home-hero__stat-icon"><i class="fa-solid fa-users"></i></span>
+                        <div>
+                            <span class="home-hero__stat-num"><span class="odometer" data-count="25000" dir="ltr">0</span>+</span>
+                            <span class="home-hero__stat-label">مريض تمت خدمتهم</span>
+                        </div>
+                    </div>
+                    <div class="home-hero__stat">
+                        <span class="home-hero__stat-icon"><i class="fa-solid fa-user-doctor"></i></span>
+                        <div>
+                            <span class="home-hero__stat-num"><span class="odometer" data-count="12" dir="ltr">0</span>+</span>
+                            <span class="home-hero__stat-label">أخصائي عيون</span>
+                        </div>
+                    </div>
+                    <div class="home-hero__stat">
+                        <span class="home-hero__stat-icon"><i class="fa-solid fa-eye"></i></span>
+                        <div>
+                            <span class="home-hero__stat-num"><span class="odometer" data-count="40" dir="ltr">0</span>+</span>
+                            <span class="home-hero__stat-label">علاجات وإجراءات</span>
+                        </div>
                     </div>
                 </div>
             </div>
