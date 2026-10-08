@@ -123,18 +123,19 @@
     })();
 
     /*======================================
-      Home Services Reveal
+      Home Sections Reveal
       ========================================*/
     (function () {
-        const grid = document.querySelector(".home-services__grid");
-        if (!grid || !("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-        grid.classList.add("is-waiting");
-        new IntersectionObserver(function (entries, observer) {
-            if (!entries[0].isIntersecting) return;
-            grid.classList.replace("is-waiting", "is-inview");
-            observer.disconnect();
-        }, { threshold: 0.12 }).observe(grid);
+        document.querySelectorAll(".home-services__grid, .home-why__list").forEach(function (grid) {
+            grid.classList.add("is-waiting");
+            new IntersectionObserver(function (entries, observer) {
+                if (!entries[0].isIntersecting) return;
+                grid.classList.replace("is-waiting", "is-inview");
+                observer.disconnect();
+            }, { threshold: 0.12 }).observe(grid);
+        });
     })();
 
     /*======================================
