@@ -128,13 +128,73 @@
     (function () {
         if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-        document.querySelectorAll(".home-services__grid, .home-why__list, .home-team__grid, .home-tech__grid").forEach(function (grid) {
+        document.querySelectorAll(".home-services__grid, .home-why__list, .home-team__grid, .home-tech__grid, .svc-symptoms, .svc-steps, .svc-features").forEach(function (grid) {
             grid.classList.add("is-waiting");
             new IntersectionObserver(function (entries, observer) {
                 if (!entries[0].isIntersecting) return;
                 grid.classList.replace("is-waiting", "is-inview");
                 observer.disconnect();
             }, { threshold: 0.12 }).observe(grid);
+        });
+    })();
+
+    /*======================================
+      Service Detail: Section Rail
+      ========================================*/
+    (function () {
+        const rail = document.querySelector(".svc-rail");
+        if (!rail) return;
+
+        const links = Array.from(rail.querySelectorAll("a[href^='#']"));
+        const sections = links.map(function (link) { return document.querySelector(link.getAttribute("href")); });
+        let current = null;
+
+        function update() {
+            // The active section is the last one whose top has passed a line below the sticky header
+            const line = window.innerHeight * 0.3;
+            let index = 0;
+            sections.forEach(function (section, i) {
+                if (section && section.getBoundingClientRect().top <= line) index = i;
+            });
+            // The last section is short, so mark it once the page bottom is reached
+            if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) index = sections.length - 1;
+            if (links[index] === current) return;
+            if (current) current.classList.remove("is-active");
+            current = links[index];
+            current.classList.add("is-active");
+            // On small screens the rail scrolls sideways, so keep the active chip in view
+            const list = current.closest("ol");
+            if (list.scrollWidth > list.clientWidth) current.scrollIntoView({ block: "nearest", inline: "center" });
+        }
+
+        let ticking = false;
+        window.addEventListener("scroll", function () {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(function () { update(); ticking = false; });
+        }, { passive: true });
+        update();
+    })();
+
+    /*======================================
+      Service Detail: Vision Simulator
+      ========================================*/
+    (function () {
+        document.querySelectorAll(".svc-sim").forEach(function (sim) {
+            const range = sim.querySelector(".svc-sim__range");
+            range.addEventListener("input", function () {
+                sim.classList.remove("is-hinting");
+                sim.style.setProperty("--pos", range.value + "%");
+            });
+
+            // One sweep when the simulator first appears, to show that it can be dragged
+            if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+            new IntersectionObserver(function (entries, observer) {
+                if (!entries[0].isIntersecting) return;
+                sim.classList.add("is-hinting");
+                sim.addEventListener("animationend", function () { sim.classList.remove("is-hinting"); }, { once: true });
+                observer.disconnect();
+            }, { threshold: 0.6 }).observe(sim);
         });
     })();
 
