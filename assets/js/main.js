@@ -75,6 +75,31 @@
     });
 
     /*======================================
+      Smooth Scrolling
+      ========================================*/
+    (function () {
+        // Wheel and keyboard scrolling are eased; touch scrolling stays native
+        if (typeof Lenis === "undefined" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        const lenis = new Lenis({ autoRaf: true, lerp: 0.1, allowNestedScroll: true });
+        if (typeof ScrollTrigger !== "undefined") lenis.on("scroll", ScrollTrigger.update);
+        window.lenis = lenis;
+
+        // Same-page links glide to their target; scroll-margin-top on the target sets the gap under the header
+        document.addEventListener("click", function (event) {
+            const link = event.target.closest("a[href*='#']");
+            if (!link || event.defaultPrevented || link.target === "_blank") return;
+            if (link.pathname !== location.pathname || link.search !== location.search || link.hash.length < 2) return;
+
+            const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+            if (!target) return;
+            event.preventDefault();
+            lenis.scrollTo(target);
+            history.pushState(null, "", link.hash);
+        });
+    })();
+
+    /*======================================
       Home Hero Animation
       ========================================*/
     (function () {
@@ -197,6 +222,22 @@
             }, { threshold: 0.6 }).observe(sim);
         });
     })();
+
+    /*======================================
+      FAQ Shortcuts
+      ========================================*/
+    document.querySelectorAll("[data-faq-open]").forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            const answer = document.querySelector(link.getAttribute("href"));
+            if (!answer || typeof bootstrap === "undefined") return;
+
+            event.preventDefault();
+            bootstrap.Collapse.getOrCreateInstance(answer, { toggle: false }).show();
+            const item = answer.closest(".home-faq__item");
+            if (window.lenis) window.lenis.scrollTo(item);
+            else item.scrollIntoView({ block: "start" });
+        });
+    });
 
     /*======================================
       Footer Pointer Light

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Book an Appointment | Majan-Eye-Centre</title>
-    <meta name="description" content="Schedule your eye checkup or consultation online at Majan Eye Center. Choose your doctor and preferred date. Book now for quality eye care!">
+    <meta name="description" content="Request an eye appointment online at Majan Eye Centre in Barka, Oman. Choose your service, doctor and preferred date, and our team will confirm your visit.">
     <meta name="author" content="Brillowelle">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
@@ -150,7 +150,7 @@
                                         <li class="">
                                             <a href="faq.html">FAQ</a>
                                         </li>
-                                        <li class="active"><a href="contact.html">Contact Us</a></li>
+                                        <li class=""><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -165,17 +165,17 @@
                                                 <a href="#">English</a>
                                                 <ul class="submenu">
                                                     <li><a href="#">English</a></li>
-                                                    <li><a href="contact-ar.html">العربية</a></li>
+                                                    <li><a href="appointment-ar.html">العربية</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="header__btn-wrap d-none d-sm-inline-flex">
-                                    <a href="contact.html" class="rr-btn rr-btn__primary">
+                                    <a href="appointment.html" class="rr-btn rr-btn__primary">
                                         <span class="btn-wrap">
-                                            <span class="text-one">Contact Us <i class="fa-solid fa-phone"></i></span>
-                                            <span class="text-two">Contact Us <i class="fa-solid fa-phone"></i></span>
+                                            <span class="text-one">Book Appointment <i class="fa-solid fa-calendar-check"></i></span>
+                                            <span class="text-two">Book Appointment <i class="fa-solid fa-calendar-check"></i></span>
                                         </span>
                                     </a>
                                 </div>
@@ -199,163 +199,185 @@
     <!-- Header area end -->
 
     <main>
-        <!-- Breadcrumb area start  -->
-        <div class="breadcrumb__area header__background-color breadcrumb-space overly overflow-hidden mb-20">
-            <div class="breadcrumb__background" data-background="./assets/imgs/breadcrumb/breadcrumb-img.png"></div>
+        <section class="home-hero home-hero--page home-hero--compact">
+            <div class="home-hero__bg" aria-hidden="true">
+                <span class="home-hero__orb home-hero__orb--1"></span>
+                <span class="home-hero__orb home-hero__orb--2"></span>
+                <span class="home-hero__plus home-hero__plus--2"></span>
+            </div>
             <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-12">
-                        <div class="breadcrumb__content text-center">
-                            <h2 class="breadcrumb__title mb-15 mb-sm-10 mb-xs-5 color-white">Book Your Appointment</h2>
-
-                            <div class="breadcrumb__menu">
-                                <nav>
-                                    <ul>
-                                        <li><span><a href="index.html">Home</a></span></li>
-                                        <li class="active">Book Your Appointment<span></span></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
+                <div class="home-hero__content">
+                    <nav class="home-hero__crumb" aria-label="Breadcrumb">
+                        <a href="index.html">Home</a>
+                        <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+                        <span aria-current="page">Book an Appointment</span>
+                    </nav>
+                    <h1 class="home-hero__title">Book an <span>Appointment</span></h1>
+                    <p class="home-hero__text">Send us your preferred date and time, and our team will call or message you to confirm your visit.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Contact Us area start  -->
-        <section class="pricing-appointment section-space mt-sm-40 mt-xs-30">
-            <div class="container">
-                <div class="row align-items-center text-center mb-60 mb-sm-50 mb-xs-40">
-                    <div class="">
-                        <div class="section__title-wrapper">
-                            <h5 class="section__subtitle color-theme-primary mb-15 mb-xs-10">Book Your Appointment</h5>
-                            <h4 class="section__title mb-0">Use the form below to book your appointment online. Our team will confirm your slot shortly.</h4>
-                        </div>
-                    </div>
-    
-                </div>
-    
-                <div class="row">
-                    <!-- Contact Information -->
-                    
-                    <!-- Contact Form -->
-                    <div class="col-lg-12">
-                        <form id="gform"  method="" action="" class="pricing-appointment__form ">
-                            <h4 class="text-center section__title mb-15">Booking Form</h4>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="pricing-appointment__form-input">
-                                        <input name="name" id="name" type="text" placeholder="Your name" required>
-                                    </div>
+        <div class="svc-detail svc-detail--page">
+            <section class="page-sec page-sec--first">
+                <div class="container">
+                    <div class="appt-grid">
+                        <div class="appt-form" id="appointment">
+                            <!-- Sends to the Google Sheet through assets/js/appointment.js -->
+                            <form id="appointment-form" novalidate data-msg-required="This field is required." data-msg-phone="Please enter a valid phone number." data-msg-email="Please enter a valid email address." data-msg-past="Please choose today or a later date." data-msg-closed="The clinic is closed on Saturdays. Please choose another day." data-msg-fix="Please check the highlighted fields." data-msg-sending="Sending your request…" data-msg-error="We couldn’t send your request. Please try again, or call or WhatsApp us on +968 9177 4829." data-wa-intro="Appointment request from the website:">
+                                <div class="appt-form__head">
+                                    <h5 class="section__subtitle color-theme-primary mb-15 mb-xs-10">Appointment Request</h5>
+                                    <h2 class="appt-form__title">Tell us when you’d like to visit</h2>
+                                    <p class="appt-form__intro">Fields marked <b>*</b> are required. This is a request, and our team will contact you to confirm the exact time.</p>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="pricing-appointment__form-input">
-                                        <input name="email" id="email" type="email" placeholder="Your email" required>
+                                <fieldset class="appt-group">
+                                    <legend class="appt-group__title"><span>1</span>Your details</legend>
+                                    <div class="appt-fields">
+                                        <div class="appt-field">
+                                            <label class="appt-label" for="appt-name" data-short="Name">Full name <b aria-hidden="true">*</b></label>
+                                            <input class="appt-control" id="appt-name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Your full name" required aria-describedby="appt-name-error">
+                                            <span class="appt-error" id="appt-name-error" role="alert"></span>
+                                        </div>
+                                        <div class="appt-field">
+                                            <label class="appt-label" for="appt-phone" data-short="Phone">Phone number <b aria-hidden="true">*</b></label>
+                                            <input class="appt-control" id="appt-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" dir="ltr" placeholder="+968 9XXX XXXX" required aria-describedby="appt-phone-error">
+                                            <span class="appt-error" id="appt-phone-error" role="alert"></span>
+                                        </div>
+                                        <div class="appt-field appt-field--full">
+                                            <label class="appt-label" for="appt-email" data-short="Email">Email <small>(optional)</small></label>
+                                            <input class="appt-control" id="appt-email" name="email" type="email" autocomplete="email" maxlength="120" dir="ltr" placeholder="name@example.com" aria-describedby="appt-email-error">
+                                            <span class="appt-error" id="appt-email-error" role="alert"></span>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="pricing-appointment__form-input">
-                                        <input name="phone" id="phone" type="tel" placeholder="Phone" required>
+                                </fieldset>
+                                <fieldset class="appt-group">
+                                    <legend class="appt-group__title"><span>2</span>Your visit</legend>
+                                    <div class="appt-fields">
+                                        <div class="appt-field">
+                                            <label class="appt-label" for="appt-service" data-short="Service">Service <small>(optional)</small></label>
+                                            <select class="appt-control" id="appt-service" name="service"  aria-describedby="appt-service-error">
+                                                <option value="" selected>Select a service</option>
+                                                <option value="General eye examination">General eye examination</option>
+                                                <option value="Cataract">Cataract</option>
+                                                <option value="Glaucoma">Glaucoma</option>
+                                                <option value="Retina &amp; diabetic eye care">Retina & diabetic eye care</option>
+                                                <option value="Children's eye care">Children's eye care</option>
+                                                <option value="Eyelid &amp; oculoplastic">Eyelid & oculoplastic</option>
+                                                <option value="Contact lenses &amp; keratoconus">Contact lenses & keratoconus</option>
+                                                <option value="Other / not sure">Other / not sure</option>
+                                            </select>
+                                            <span class="appt-error" id="appt-service-error" role="alert"></span>
+                                        </div>
+                                        <div class="appt-field">
+                                            <label class="appt-label" for="appt-doctor" data-short="Doctor">Preferred doctor <small>(optional)</small></label>
+                                            <select class="appt-control" id="appt-doctor" name="doctor"  aria-describedby="appt-doctor-error">
+                                                <option value="No preference">No preference</option>
+                                                <option value="Dr. Waleed Bunami">Dr. Waleed Bunami</option>
+                                                <option value="Dr. Mohammed Anwar">Dr. Mohammed Anwar</option>
+                                            </select>
+                                            <span class="appt-error" id="appt-doctor-error" role="alert"></span>
+                                        </div>
+                                        <div class="appt-field">
+                                            <label class="appt-label" for="appt-date" data-short="Date">Preferred date <small>(Sun – Fri)</small> <b aria-hidden="true">*</b></label>
+                                            <input class="appt-control" id="appt-date" name="date" type="date" required aria-describedby="appt-date-error">
+                                            <span class="appt-error" id="appt-date-error" role="alert"></span>
+                                        </div>
+                                        <div class="appt-field">
+                                            <span class="appt-label" id="appt-time-label" data-short="Time">Preferred time <small>(optional)</small></span>
+                                            <div class="appt-pills" role="radiogroup" aria-labelledby="appt-time-label">
+                                                <label class="appt-pill"><input type="radio" name="time" value="Morning (9 am - 1 pm)"><span class="appt-pill__box"><i class="fa-solid fa-sun-bright" aria-hidden="true"></i><span>Morning <small>9 am – 1 pm</small></span></span></label>
+                                                <label class="appt-pill"><input type="radio" name="time" value="Evening (4 pm - 9 pm)"><span class="appt-pill__box"><i class="fa-solid fa-moon" aria-hidden="true"></i><span>Evening <small>4 pm – 9 pm</small></span></span></label>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="pricing-appointment__form-select">
-                                        <select name="doctor" id="doctor">
-                                            <option value="" disabled="" selected="" hidden="">Choose a Doctor</option>
-                                            <option value="Dr.WALEED-BUNAMI">Dr. WALEED BUNAMI</option>
-                                            <option value="Dr.MOHAMMED-ANWAR">Dr. MOHAMMED ANWAR</option>
-                                        </select>
+                                </fieldset>
+                                <fieldset class="appt-group">
+                                    <legend class="appt-group__title"><span>3</span>Anything we should know?</legend>
+                                    <div class="appt-field appt-field--full">
+                                        <label class="appt-label" for="appt-message" data-short="Message">Message <small>(optional)</small></label>
+                                        <textarea class="appt-control" id="appt-message" name="message" rows="4" maxlength="1500" placeholder="Symptoms, previous treatment, or questions for the doctor" aria-describedby="appt-message-error"></textarea>
+                                        <span class="appt-error" id="appt-message-error" role="alert"></span>
                                     </div>
-                                </div>
-                                <div class="col-sm-6">
-                                <div class="pricing-appointment__form-input">
-                                    <div class="input-wrapper">
-                                        <input id="datepicker" name="date" type="text" placeholder="YY/MM/DD">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                    </div>
-                                </div>
-                            </div>
-                                <div class="col-sm-12">
-                                    <div class="pricing-appointment__form-input">
-                                        <textarea name="message" id="message" placeholder="Messege"></textarea>
-                                    </div>
-                                </div>
-    
-                                <div class="col-12">
-                                    <button type="submit" class="rr-btn rr-btn__primary-color mt-0">
+                                </fieldset>
+                                <div class="appt-hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+                                <input type="hidden" name="form" value="appointment">
+                                <input type="hidden" name="lang" value="">
+                                <input type="hidden" name="page" value="">
+                                <div class="appt-form__foot">
+                                    <button type="submit" class="rr-btn">
                                         <span class="btn-wrap">
-                                            <span class="text-one">Book Now<i class="fa-solid fa-paper-plane-top"></i></span>
-                                            <span class="text-two">Book Now<i class="fa-solid fa-paper-plane-top"></i></span>
+                                            <span class="text-one">Request Appointment<i class="fa-solid fa-calendar-check"></i></span>
+                                            <span class="text-two">Request Appointment<i class="fa-solid fa-calendar-check"></i></span>
                                         </span>
                                     </button>
+                                    <p class="appt-form__note">By sending this request you agree to be contacted by Majan Eye Centre about your appointment.</p>
                                 </div>
-                                <div class="mt-3">
-                                    <p id="submit-alert" ></p>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-lg-4 mt-5">
-                        <div class="pricing-appointment__contact-item__wrap d-flex flex-column">
-                            <div class="pricing-appointment__contact-item d-flex align-items-end">
-                                <div class="pricing-appointment__contact-item-icon d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div class="pricing-appointment__contact-item-text">
-                                    <p>Request A Call:</p>
-                                    <h5 class="mb-0"><a href="tel:+96891774829" target="_blank">+96891774829</a></h5>
-                                </div>
-                            </div>
-    
-                            <div class="pricing-appointment__contact-item d-flex align-items-end">
-                                <div class="pricing-appointment__contact-item-icon d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div class="pricing-appointment__contact-item-text">
-                                    <p>Email Address</p>
-                                    <h5 class="mb-0"><a href="mailto:treegmajan@gmail.com">treegmajan@gmail.com</a></h5>
-                                </div>
-                            </div>
-
-                            <div class="pricing-appointment__contact-item d-flex align-items-end">
-                                <div class="pricing-appointment__contact-item-icon d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-clock"></i>
-                                </div>
-                                <div class="pricing-appointment__contact-item-text">
-                                    <p>Sunday - Friday:</p>
-                                    <h5 class="mb-0">9 am to 1 pm -- 4 pm to 9 pm</h5>
-                                </div>
-                            </div>
-    
-                            <div class="pricing-appointment__contact-item d-flex align-items-end">
-                                <div class="pricing-appointment__contact-item-icon d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div class="pricing-appointment__contact-item-text">
-                                    <p>Location Address</p>
-                                    <h5 class="mb-0"><a href="https://maps.app.goo.gl/dYARPtevGhyvyZDq9">من أسواق شمس الخليج، ولاية, Barka 320, Oman</a></h5>
+                                <p class="appt-status" role="status" aria-live="polite"></p>
+                            </form>
+                            <div class="appt-success">
+                                <span class="appt-success__icon"><i class="fa-solid fa-check" aria-hidden="true"></i></span>
+                                <h2 class="appt-success__title" tabindex="-1">Request received</h2>
+                                <p class="appt-success__text">Thank you, <span class="appt-success__name"></span>. Our team will contact you shortly to confirm your appointment. If you’d like, you can also send us the same details on WhatsApp.</p>
+                                <div class="appt-success__actions">
+                                    <a class="appt-success__wa" href="https://wa.me/96891774829" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i>Send on WhatsApp</a>
+                                    <button type="button" class="appt-success__again">Book another appointment</button>
                                 </div>
                             </div>
                         </div>
+
+                        <aside class="appt-aside">
+                            <div class="appt-card">
+                                <h3 class="appt-card__title">What happens next</h3>
+                                <ol class="appt-steps">
+                                    <li><strong>Send your request</strong><span>It takes about a minute.</span></li>
+                                    <li><strong>We confirm with you</strong><span>Our team calls or messages you to agree the time.</span></li>
+                                    <li><strong>Visit the centre</strong><span>Bring your ID, current glasses and any previous eye reports.</span></li>
+                                </ol>
+                            </div>
+                            <div class="appt-card">
+                                <h3 class="appt-card__title">Prefer to talk to us?</h3>
+                                <div class="contact-cards">
+                                    <a class="contact-card" href="tel:+96891774829">
+                                        <span class="contact-card__icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                                        <span class="contact-card__body">
+                                            <span class="contact-card__label">Call us</span>
+                                            <span class="contact-card__value"><span dir="ltr">+968 9177 4829</span></span>
+                                        </span>
+                                    </a>
+                                    <a class="contact-card contact-card--wa" href="https://wa.me/96891774829" target="_blank" rel="noopener">
+                                        <span class="contact-card__icon"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></span>
+                                        <span class="contact-card__body">
+                                            <span class="contact-card__label">WhatsApp</span>
+                                            <span class="contact-card__value"><span dir="ltr">+968 9177 4829</span></span>
+                                        </span>
+                                    </a>
+                                    <div class="contact-card">
+                                        <span class="contact-card__icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>
+                                        <span class="contact-card__body">
+                                            <span class="contact-card__label">Sunday – Friday</span>
+                                            <span class="contact-card__value">9 am – 1 pm, 4 pm – 9 pm</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section class="page-sec page-sec--last">
+                            <div class="container">
+                                <div class="section__title-wrapper text-center mb-50 mb-xs-30">
+                                    <h5 class="section__subtitle color-theme-primary mb-15 mb-xs-10 title-animation">Clinic Location</h5>
+                                    <h2 class="section__title mb-0 title-animation">Find Us</h2>
+                                </div>
+                                <div class="contact-map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4196.70675234799!2d57.886662599999994!3d23.6661121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8ddb339f08ea5b%3A0xa5db2e69d8f915fa!2zdHJlZUcgTWFqYW4gRXllIENlbnRyZSDZhdix2YPYsiDZhdis2KfZhiDZhNmE2LnZitmI2YY!5e1!3m2!1sen!2som!4v1746695718875!5m2!1sen!2som" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <a class="contact-map__link" href="https://maps.app.goo.gl/dYARPtevGhyvyZDq9" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Get Directions</a>
+                                </div>
+                            </div>
+                        </section>
+        </div>
 
-        <!-- Map Area -->
-        <section>
-            <div class="container">
-                <div class="col-12">
-                    <div class="section__title-wrapper text-center mb-40">
-                            <h2 class="section__title mb-0 title-animation"><i class="fa-regular fa-location-dot"></i> Clinic Location</h2>
-                        </div>
-                    <div class="contact__map contact__map-footer_up">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4196.70675234799!2d57.886662599999994!3d23.6661121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e8ddb339f08ea5b%3A0xa5db2e69d8f915fa!2zdHJlZUcgTWFqYW4gRXllIENlbnRyZSDZhdix2YPYsiDZhdis2KfZhiDZhNmE2LnZitmI2YY!5e1!3m2!1sen!2som!4v1746695718875!5m2!1sen!2som" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-
-        </section>
     </main>
         
     <!-- Footer area start -->
@@ -376,10 +398,9 @@
                             </div>
     
                             <div class="footer-3__social mt-30 mt-xs-30">
-                                <a href="https://www.facebook.com/" target="_blank"> <i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.instagram.com/treegmajan/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="https://www.x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://www.facebook.com/majaneyecentre/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://wa.me/+96891774829?text=Hi" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                                <a href="https://www.instagram.com/treegmajan/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -480,51 +501,6 @@
     <!-- Footer area end -->
 
     <!-- JS here -->
-    <script>
-        $("#gform").submit((e) => {
-            e.preventDefault();
-            // Doctor field validation
-            if (!$('#doctor').val()) {
-                $('#submit-alert').text('Please select a doctor before submitting!').css({"display":"contents", "color": "red", "font-weight": "900"});
-                return;
-            }
-            $("#submit-alert").html("Submitting...<br>Please wait, your request is being processed.").css({ "display": "contents", "color": "#0288d1", "font-weight": "900" });
-
-            $.ajax({
-                url: "https://script.google.com/macros/s/AKfycbzK-qOLnxlMq6S7LhlfRepqll4jQo-GCweZeWVBoTOw77gY9F162Om-VndPkCI6JjM0/exec",
-                data: $("#gform").serialize(),
-                method: "post",
-                success: function(response) {
-                    $("#submit-alert").text("Thank you! Your appointment request has been submitted!!").css({ "display": "contents", "color": "#50b948", "font-weight": "900" });
-
-                    // Prepare WhatsApp message and open in new tab/window. We use the previously opened window (waWin)
-                    var waNumber = '96891774829'; // Oman number without +
-                    var waMessage = 'Book an Appointment:\n';
-                    waMessage += 'Name: ' + ($('#name').val() || '-') + '\n';
-                    waMessage += 'Email: ' + ($('#email').val() || '-') + '\n';
-                    waMessage += 'Phone: ' + ($('#phone').val() || '-') + '\n';
-                    waMessage += 'Date: ' + ($('#datepicker').val() || '-') + '\n';
-                    waMessage += 'Doctor: ' + ($('#doctor').val() || '-') + '\n';
-                    waMessage += 'Message: ' + ($('#message').val() || '-');
-                    var waUrl = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(waMessage);
-
-                    // Redirect current tab to WhatsApp (same tab navigation)
-                    try {
-                        window.location.href = waUrl;
-                    } catch (err) {
-                        // If navigation fails for any reason, show a clickable link
-                        $('#submit-alert').append('<br><a href="' + waUrl + '" target="_blank">Open WhatsApp</a>');
-                    }
-
-                    setTimeout(() => window.location.reload(), 5000); // Reload after 5 seconds (you can adjust)
-                },
-                error: function(err) {
-                    $("#submit-alert").text("Something Went Wrong!..Check filled details are correct and Submit again or Please try Contacting through WhatsApp or Mobile Number")
-                        .css({ "display": "contents", "color": "red", "font-weight": "900" });
-                }
-            });
-        });
-    </script>
     <script src="assets/js/plugins/waypoints.min.js"></script>
     <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
     <script src="assets/js/plugins/meanmenu.min.js"></script>
@@ -538,8 +514,9 @@
     <script src="assets/js/plugins/gsap.min.js"></script>
     <script src="assets/js/plugins/ScrollTrigger.min.js"></script>
     <script src="assets/js/plugins/SplitText.js"></script>
-    <script src="assets/js/plugins/smoothscroll.js"></script>
+    <script src="assets/js/plugins/lenis.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/appointment.js"></script>
     
 </body>
 
