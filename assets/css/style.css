@@ -8176,7 +8176,10 @@ body.arabic .svc-doc__role {
   color: #2e8f37;
 }
 .svc-doc__body .svc-doc__label {
-  margin: 18px 0 10px;
+  width: 100%;
+  margin: 16px 0 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgb(7 28 60 / 8%);
   font-weight: 600;
   font-size: 13px;
   line-height: 18px;
@@ -8207,6 +8210,50 @@ body.arabic .svc-doc__role {
   color: var(--rr-common-white);
   border-color: var(--rr-theme-primary);
   background: var(--rr-theme-primary);
+}
+.svc-doc .svc-doc__chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 7px 20px;
+  width: 100%;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+.svc-doc .svc-doc__chips li {
+  position: relative;
+  padding-inline-start: 20px;
+  font-size: 14px;
+  line-height: 21px;
+}
+.svc-doc .svc-doc__chips li::before {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  content: "\f00c";
+  font-family: var(--rr-ff-fontawesome);
+  font-weight: 900;
+  font-size: 11px;
+  color: #2e8f37;
+}
+.svc-doc .svc-doc__chips a {
+  display: inline;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font-weight: 400;
+  font-size: inherit;
+  line-height: inherit;
+  background: none;
+  color: var(--rr-common-placeholder);
+  transition: color 0.3s ease-out;
+}
+.svc-doc .svc-doc__chips a:hover,
+.svc-doc .svc-doc__chips a:focus-visible {
+  color: #1f7a2b;
+  background: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .svc-doc__more {
   display: inline-flex;
