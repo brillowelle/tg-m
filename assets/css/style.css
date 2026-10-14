@@ -9990,3 +9990,147 @@ a.contact-card:hover {
     padding-top: 16px;
   }
 }
+
+/*----------------------------------------*/
+/*  Home: content intros, section buttons
+/*----------------------------------------*/
+.home-intro {
+  max-width: 640px;
+  margin: 14px auto 0;
+  font-size: 17px;
+  line-height: 28px;
+  color: var(--rr-common-placeholder);
+}
+.home-section-cta {
+  margin-top: 40px;
+  text-align: center;
+}
+.home-section-cta .rr-btn {
+  padding: 16px 30px;
+  box-shadow: 0 12px 28px rgb(80 185 72 / 32%);
+}
+.home-section-cta .rr-btn .btn-wrap span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: none;
+}
+.home-section-cta .rr-btn .btn-wrap i {
+  padding: 0;
+  margin-inline-start: 12px;
+}
+.home-section-cta .rr-btn:hover {
+  transform: translateY(-2px);
+}
+.home-hero__eyebrow {
+  font-weight: 500;
+  color: var(--hero-green-deep);
+}
+.home-hero__eyebrow i {
+  font-size: 13px;
+  color: var(--hero-green-deep);
+}
+.home-services__text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+@media (hover: hover) and (min-width: 992px) {
+  .home-services__card:hover .home-services__text,
+  .home-services__card:focus-visible .home-services__text {
+    max-height: 110px;
+  }
+}
+@media (max-width: 991px) {
+  .home-services__text {
+    -webkit-line-clamp: 3;
+  }
+}
+.site-cta__actions .site-cta__wa .btn-wrap i {
+  font-size: 17px;
+  color: #25d366;
+}
+@media (max-width: 1199px) {
+  .site-cta__actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 575px) {
+  .home-intro {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .site-cta__actions .site-cta__wa {
+    flex-basis: 100%;
+  }
+}
+
+/*----------------------------------------*/
+/*  Footer: contact labels, language
+/*----------------------------------------*/
+.footer-3__area-common .footer-3__contact {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.footer-3__area-common .footer-3__contact small {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: rgb(255 255 255 / 60%);
+}
+.footer-3__lang {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--rr-common-white);
+}
+.footer-3__lang i {
+  color: #a5eb9f;
+}
+.footer-3__lang-sep {
+  color: rgb(255 255 255 / 35%);
+}
+.footer-3__lang a {
+  color: rgb(255 255 255 / 75%);
+}
+.footer-3__lang a:hover {
+  color: #a5eb9f;
+}
+@media (max-width: 767px) {
+  .footer-3__area-common .footer-3__widget-item-1 .footer-3__lang {
+    grid-column: 1 / -1;
+    margin-top: 0;
+  }
+}
+
+/*----------------------------------------*/
+/*  Home: doctor bios
+/*----------------------------------------*/
+.svc-detail .home-team__bio,
+.home-team__bio {
+  display: -webkit-box;
+  margin: -8px 0 16px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--rr-common-placeholder);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+@media (max-width: 575px) {
+  .home-team__bio {
+    display: -webkit-box;
+    margin: -6px 0 12px;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 19px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
