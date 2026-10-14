@@ -2708,7 +2708,7 @@ a.rr-a-btn:hover {
   gap: 12px;
 }
 .header-1 .header__action .main-menu > ul > li.has-dropdown > a {
-  padding: 9px 14px;
+  padding: 3px 10px;
   border: 1px solid rgb(7 28 60 / 12%);
   border-radius: 500px;
   font-weight: 500;
