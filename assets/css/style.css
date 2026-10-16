@@ -10134,3 +10134,139 @@ a.contact-card:hover {
     -webkit-line-clamp: 3;
   }
 }
+
+/*----------------------------------------*/
+/*  LASIK
+/*----------------------------------------*/
+.svc-sim__chart--refractive {
+  filter: blur(3.5px) contrast(0.85);
+  clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+}
+.svc-features--wide {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 575px) {
+  .svc-features--wide {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/*----------------------------------------*/
+/*  Header booking button: attention effect
+/*----------------------------------------*/
+@property --cta-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.header-1 .header__btn-wrap {
+  position: relative;
+  isolation: isolate;
+  border-radius: 500px;
+}
+/* a soft light that travels around the button's edge */
+.header-1 .header__btn-wrap::before {
+  position: absolute;
+  inset: -4px;
+  z-index: -1;
+  border-radius: inherit;
+  content: "";
+  background: conic-gradient(from var(--cta-angle), rgb(31 122 43 / 0%) 0deg, rgb(31 122 43 / 0%) 200deg, #8fe388 270deg, #1f7a2b 320deg, #50b948 345deg, rgb(31 122 43 / 0%) 360deg);
+  animation: ctaOrbit 3s linear infinite;
+}
+/* the same light, blurred, as a soft glow that follows it */
+.header-1 .header__btn-wrap::after {
+  position: absolute;
+  inset: -6px;
+  z-index: -2;
+  border-radius: inherit;
+  content: "";
+  background: inherit;
+  background: conic-gradient(from var(--cta-angle), rgb(80 185 72 / 0%) 0deg, rgb(80 185 72 / 0%) 220deg, rgb(80 185 72 / 70%) 320deg, rgb(80 185 72 / 0%) 360deg);
+  filter: blur(8px);
+  animation: ctaOrbit 3s linear infinite;
+}
+.header-1 .header__btn-wrap .rr-btn {
+  position: relative;
+  z-index: 1;
+}
+/* the calendar icon gives a small shake every few seconds */
+.header-1 .header__btn-wrap .rr-btn .text-one i {
+  transform-origin: 50% 20%;
+  animation: ctaNudge 4.5s ease-in-out 1.5s infinite;
+}
+.header-1 .header__btn-wrap:hover::before {
+  animation-duration: 1.6s;
+}
+@keyframes ctaOrbit {
+  to {
+    --cta-angle: 360deg;
+  }
+}
+@keyframes ctaNudge {
+  0%, 76%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  80% {
+    transform: rotate(-16deg) scale(1.15);
+  }
+  84% {
+    transform: rotate(14deg) scale(1.15);
+  }
+  88% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  92% {
+    transform: rotate(6deg) scale(1.05);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .header-1 .header__btn-wrap::before {
+    animation: none;
+    background: rgb(80 185 72 / 45%);
+  }
+  .header-1 .header__btn-wrap::after {
+    display: none;
+  }
+  .header-1 .header__btn-wrap .rr-btn .text-one i {
+    animation: none;
+  }
+}
+
+/*----------------------------------------*/
+/*  Booking buttons: pulse
+/*----------------------------------------*/
+a.rr-btn[href$="appointment.html"],
+a.rr-btn[href$="appointment-ar.html"] {
+  overflow: hidden;
+  animation: bookPulse 2.4s ease-out infinite;
+}
+/* the header button has its own travelling-light effect */
+.header-1 .header__btn-wrap a.rr-btn {
+  animation: none;
+}
+@keyframes bookPulse {
+  0% {
+    box-shadow: 0 12px 28px rgb(80 185 72 / 30%), 0 0 0 0 rgb(80 185 72 / 55%);
+  }
+  70% {
+    box-shadow: 0 12px 28px rgb(80 185 72 / 30%), 0 0 0 14px rgb(80 185 72 / 0%);
+  }
+  100% {
+    box-shadow: 0 12px 28px rgb(80 185 72 / 30%), 0 0 0 0 rgb(80 185 72 / 0%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  a.rr-btn[href$="appointment.html"],
+  a.rr-btn[href$="appointment-ar.html"] {
+    animation: none;
+  }
+}
+.home-services__all {
+  margin-top: 44px;
+}
+@media (max-width: 767px) {
+  .home-services__all {
+    margin-top: 30px;
+  }
+}
