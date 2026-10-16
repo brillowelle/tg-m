@@ -10270,3 +10270,159 @@ a.rr-btn[href$="appointment-ar.html"] {
     margin-top: 30px;
   }
 }
+
+/*----------------------------------------*/
+/*  Mobile refinements
+/*----------------------------------------*/
+/* Why Choose: on stacked layouts the button follows the list */
+@media (max-width: 991px) {
+  .home-why__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+  }
+  .home-why__head {
+    display: contents;
+  }
+  .home-why__head > * {
+    order: 1;
+    text-align: center;
+  }
+  .home-why__head > .rr-btn {
+    order: 3;
+    align-self: center;
+    margin-top: 30px;
+  }
+  .home-why__list {
+    order: 2;
+    width: 100%;
+    margin-top: 6px;
+  }
+  .home-why__media {
+    order: 4;
+    margin-top: 40px;
+  }
+}
+
+/* Home About section on phones */
+@media (max-width: 575px) {
+  .about-us.section-space {
+    padding-bottom: 30px;
+  }
+  .about-us__content > p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .home-about__points {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 26px;
+  }
+  .home-about__points li {
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 6px;
+    border-radius: 16px;
+    font-size: 12.5px;
+    line-height: 17px;
+    text-align: center;
+  }
+  .home-about__points i {
+    width: 34px;
+    height: 34px;
+  }
+  .about-us__media {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-top: 32px;
+  }
+  .about-us__media-img.img2 {
+    order: 1;
+    width: 100%;
+    margin: 0;
+  }
+  .about-us__media-img.img2 img:not(.shape) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: 50% 30%;
+  }
+  .about-us__media-experience-box__wrapper {
+    order: 2;
+    position: relative;
+    z-index: 3;
+    margin-top: -46px;
+  }
+  .about-us__media-experience-box {
+    margin-top: 0 !important;
+  }
+}
+
+/* Booking banner on phones: booking button full width, call and WhatsApp side by side */
+@media (max-width: 575px) {
+  .site-cta__actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .site-cta__actions .rr-btn {
+    width: 100%;
+  }
+  .site-cta__actions .rr-btn:not(.rr-btn__transparent) {
+    grid-column: 1 / -1;
+    padding: 16px 12px;
+  }
+  .site-cta__actions .rr-btn:not(.rr-btn__transparent) .btn-wrap i {
+    display: inline-block;
+  }
+  .site-cta__actions .rr-btn:not(.rr-btn__transparent) .btn-wrap span {
+    font-size: 16px;
+  }
+  .site-cta__actions .site-cta__wa {
+    flex-basis: auto;
+  }
+}
+
+/* Services page: other services two per row on phones */
+@media (max-width: 575px) {
+  .svc-list--other .svc-list__grid {
+    --svc-card-gap: 12px;
+  }
+  .svc-list--other .svc-card {
+    flex-basis: calc((100% - var(--svc-card-gap)) / 2);
+    border-radius: 18px;
+  }
+  .svc-list--other .svc-card__media img {
+    aspect-ratio: 4 / 3;
+    height: auto;
+    object-fit: cover;
+  }
+  .svc-list--other .svc-card__body {
+    padding: 14px 12px 16px;
+  }
+  .svc-list--other .svc-card__title {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  .svc-list--other .svc-card__text {
+    display: -webkit-box;
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 19px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  .svc-list--other .svc-card__btn {
+    padding: 7px 12px;
+    font-size: 13px;
+  }
+}
+
+/* doctor cards without the service list */
+.svc-doc .svc-doc__more {
+  padding-top: 16px;
+}
