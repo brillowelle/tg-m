@@ -10426,3 +10426,184 @@ a.rr-btn[href$="appointment-ar.html"] {
 .svc-doc .svc-doc__more {
   padding-top: 16px;
 }
+
+/*----------------------------------------*/
+/*  Appointment: thank-you page
+/*----------------------------------------*/
+.thanks-hero__icon {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  font-size: 32px;
+  color: var(--rr-common-white);
+  background: linear-gradient(145deg, #5cc653 0%, #2e8f37 100%);
+  box-shadow: 0 0 0 12px rgb(80 185 72 / 14%), 0 16px 34px rgb(80 185 72 / 34%);
+  animation: thanksPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.thanks-hero__icon i {
+  color: inherit;
+}
+.thanks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.thanks-steps li:first-child::before {
+  content: "\f00c";
+  font-family: var(--rr-ff-fontawesome);
+  font-weight: 900;
+  color: var(--rr-common-white);
+  border-color: transparent;
+  background: var(--rr-theme-primary);
+}
+.svc-detail .thanks-card__text {
+  margin: -6px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--rr-common-placeholder);
+}
+.thanks-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.thanks-card__actions .rr-btn {
+  padding: 14px 22px;
+  border: 2px solid var(--rr-theme-primary);
+}
+.thanks-card__actions .rr-btn .btn-wrap span {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: none;
+}
+.thanks-card__actions .rr-btn .btn-wrap i {
+  padding: 0;
+  margin-inline-start: 10px;
+}
+.thanks-card__actions .thanks-wa {
+  border-color: #25d366;
+  background-color: #25d366;
+}
+.thanks-card__actions .rr-btn__transparent {
+  background-color: var(--rr-common-white);
+}
+.svc-detail .thanks-card__hours {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 0;
+  font-size: 14px;
+  color: var(--rr-common-placeholder);
+}
+.thanks-card__hours i {
+  color: #2e8f37;
+}
+.thanks-card__home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--svc-line);
+  width: 100%;
+  font-weight: 600;
+  font-size: 15px;
+  color: #1f7a2b;
+}
+.thanks-card__home:hover {
+  color: var(--rr-heading-primary);
+}
+@keyframes thanksPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .thanks-hero__icon {
+    animation: none;
+  }
+}
+@media (max-width: 767px) {
+  .thanks-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+}
+@media (max-width: 575px) {
+  .thanks-hero__icon {
+    width: 64px;
+    height: 64px;
+    font-size: 26px;
+  }
+  .thanks-card__actions .rr-btn {
+    flex: 1 1 100%;
+    padding: 14px 12px;
+  }
+}
+
+/*----------------------------------------*/
+/*  Appointment: sending dots
+/*----------------------------------------*/
+.appt-dots {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.appt-dots i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--rr-common-white);
+  animation: apptDot 1.1s ease-in-out infinite;
+}
+.appt-dots i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.appt-dots i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.appt-form__foot .rr-btn.is-sending {
+  opacity: 1 !important;
+  background-color: var(--rr-theme-primary) !important;
+  cursor: progress;
+}
+.appt-form__foot .rr-btn .btn-wrap,
+.appt-form__foot .rr-btn .btn-wrap span {
+  transition: none;
+}
+.appt-form__foot .rr-btn.is-sending .btn-wrap {
+  visibility: hidden;
+}
+.appt-form__foot .rr-btn.is-sending .appt-dots {
+  display: flex;
+}
+@keyframes apptDot {
+  0%, 80%, 100% {
+    opacity: 0.45;
+    transform: translateY(0) scale(0.85);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .appt-dots i {
+    animation-duration: 2.4s;
+  }
+}

@@ -10,6 +10,18 @@
     const CLOSED_DAY = 6; // Saturday
     const TIMEOUT_MS = 20000;
 
+    const STORE_KEY = "majan-appointment";
+
+    // Thank-you page: greet the patient and prefill the WhatsApp button from the request just sent
+    const thanks = document.querySelector(".thanks-hero");
+    if (thanks) {
+        let saved = null;
+        try { saved = JSON.parse(sessionStorage.getItem(STORE_KEY)); } catch (error) { /* storage blocked */ }
+        if (saved && saved.name) document.querySelector(".thanks-name").textContent = " " + saved.name;
+        if (saved && saved.whatsapp) document.querySelectorAll(".thanks-wa").forEach(function (a) { a.href = saved.whatsapp; });
+        return;
+    }
+
     const card = document.querySelector(".appt-form");
     const form = document.getElementById("appointment-form");
     if (!card || !form) return;
@@ -62,9 +74,17 @@
         status.className = "appt-status" + (text ? " is-" + kind : "");
     }
 
+    // Three bouncing dots replace the button label while the request is being sent
+    const dots = document.createElement("span");
+    dots.className = "appt-dots";
+    dots.setAttribute("aria-hidden", "true");
+    dots.innerHTML = "<i></i><i></i><i></i>";
+    submit.appendChild(dots);
+
     function setSending(sending) {
         submit.disabled = sending;
         submit.classList.toggle("is-sending", sending);
+        submit.setAttribute("aria-busy", sending ? "true" : "false");
     }
 
     // What the visitor chose, in the page's language (the sheet receives the fixed English values)
@@ -116,8 +136,9 @@
         if (form.elements.website.value) return showSuccess();
 
         setSending(true);
-        showStatus(msg.msgSending, "info");
+        showStatus("", "");
 
+        let leaving = false;
         const abort = new AbortController();
         const timer = setTimeout(function () { abort.abort(); }, TIMEOUT_MS);
 
@@ -132,6 +153,15 @@
                 try { reply = JSON.parse(text); } catch (error) { /* older script versions reply with plain text */ }
                 if (reply.result === "error") throw new Error(reply.error || "Rejected");
                 showStatus("", "");
+                // Go to the thank-you page: each visit there counts as one completed booking
+                if (form.dataset.thanks) {
+                    try {
+                        sessionStorage.setItem(STORE_KEY, JSON.stringify({ name: form.elements.name.value.trim(), whatsapp: whatsappUrl() }));
+                    } catch (error) { /* storage blocked: the page still works without the name */ }
+                    leaving = true;
+                    window.location.href = form.dataset.thanks;
+                    return;
+                }
                 showSuccess();
             })
             .catch(function () {
@@ -139,7 +169,8 @@
             })
             .finally(function () {
                 clearTimeout(timer);
-                setSending(false);
+                // keep the dots while the thank-you page loads
+                if (!leaving) setSending(false);
             });
     });
 
