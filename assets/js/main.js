@@ -13,43 +13,57 @@
     class GSAPAnimation {
         static Init() {
             /*title-animation*/
+            if (typeof gsap === "undefined" || typeof SplitText === "undefined") return;
             $('.title-animation').length && this.sectionTitleAnimation('.title-animation'); 
         }
         
+        // Headings fade in word by word once they reach the screen. Each frame checks every heading that has not
+        // played yet, so fast scrolling, jumping to an anchor or reloading part-way down never leaves one hidden.
         static sectionTitleAnimation(activeClass) {
-            let sectionTitleLines = gsap.utils.toArray(activeClass);
-
-            sectionTitleLines.forEach(sectionTextLine => {
-                const tl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: sectionTextLine,
-                        start: 'top 90%',
-                        end: 'bottom 60%',
-                        scrub: false,
-                        markers: false,
-                        toggleActions: 'play none none none'
-                    }
-                });
-
-                const itemSplitted = new SplitText(sectionTextLine, { type: "chars, words" });
-                gsap.set(sectionTextLine, { perspective: 100 });
-                itemSplitted.split({ type: "words" })
-                tl.from(itemSplitted.words, {
-                    opacity: 0, 
-                    autoAlpha: 0, 
-                    transformOrigin: "top center -50",
-                    y: "10px",
-                    duration: 0.9,
-                    stagger: 0.1,
+            const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            let pending = gsap.utils.toArray(activeClass).map(function (el) {
+                const split = new SplitText(el, { type: "words" });
+                const tween = gsap.from(split.words, {
+                    opacity: 0,
+                    y: 10,
+                    duration: 0.7,
+                    stagger: 0.06,
                     ease: "power2.out",
+                    paused: true,
+                    // back to the original markup, so later layout changes can't leave words out of place
+                    onComplete: function () { split.revert(); },
                 });
+                return { el: el, tween: tween, split: split };
             });
+
+            function check() {
+                const line = window.innerHeight * 0.92;
+                pending = pending.filter(function (item) {
+                    if (item.el.getBoundingClientRect().top > line) return true;
+                    if (reduceMotion) item.tween.progress(1);
+                    else item.tween.play();
+                    return false;
+                });
+                if (!pending.length) {
+                    window.removeEventListener("scroll", onScroll);
+                    window.removeEventListener("resize", onScroll);
+                }
+            }
+            let ticking = false;
+            function onScroll() {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(function () { ticking = false; check(); });
+            }
+            window.addEventListener("scroll", onScroll, { passive: true });
+            window.addEventListener("resize", onScroll);
+            check();
         }
     }
 
     class RRDEVS {
         static LoadedAfter() {
-            $(".odometer").waypoint(
+            $.fn.waypoint && $(".odometer").waypoint(
                 function () {
                     var element = $(this.element);
                     var countNumber = element.attr("data-count");
@@ -69,10 +83,6 @@
     }
 
     $(window).on('load', RRDEVS.LoadedAfter);
-
-    window.addEventListener('resize', function() {
-        gsap.globalTimeline.clear();
-    });
 
     /*======================================
       Footer Year
@@ -151,7 +161,10 @@
             // Counter trigger points were measured while the strip was still offset
             if (typeof Waypoint !== "undefined") Waypoint.refreshAll();
         }
-        window.addEventListener("resize", finish);
+        const startWidth = window.innerWidth;
+        window.addEventListener("resize", function () {
+            if (window.innerWidth !== startWidth) finish();
+        });
     })();
 
     /*======================================
@@ -301,7 +314,7 @@
     /*======================================
       Mobile Menu Js
       ========================================*/
-    $("#mobile-menu").meanmenu({
+    $.fn.meanmenu && $("#mobile-menu").meanmenu({
         meanMenuContainer: ".mobile-menu",
         meanScreenWidth: "1199",
         meanExpand: ['<i class="fa-regular fa-angle-right"></i>'],
@@ -340,12 +353,13 @@
     /*======================================
       MagnificPopup video view
       ========================================*/
-    $(".popup-video").magnificPopup({
+    $.fn.magnificPopup && $(".popup-video").magnificPopup({
         type: "iframe",
     });
 
     /*client-testimonial__slider***/
     document.querySelectorAll(".client-testimonial__slider").forEach(function (slider) {
+        if (typeof Swiper === "undefined") return;
         new Swiper(slider, {
             slidesPerView: 2,
             spaceBetween: 30,
@@ -373,13 +387,13 @@
         });
     });
 
-    $('.pricing-appointment__form-select select').niceSelect();
-    $( "#datepicker" ).datepicker({
+    $.fn.niceSelect && $('.pricing-appointment__form-select select').niceSelect();
+    $.fn.datepicker && $( "#datepicker" ).datepicker({
         dateFormat: "yy/mm/dd"
     });
 
     /* Popular Causes Progress Bar ***/
-    if ($(".count-bar").length) {
+    if ($(".count-bar").length && $.fn.appear) {
         $(".count-bar").appear(
             function() {
                 var el = $(this);

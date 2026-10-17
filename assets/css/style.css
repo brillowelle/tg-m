@@ -10810,3 +10810,57 @@ a.rr-btn[href$="appointment-ar.html"] {
     font-size: 13px;
   }
 }
+
+/*----------------------------------------*/
+/*  Buttons: one size on phones
+/*----------------------------------------*/
+@media (max-width: 575px) {
+  main .rr-btn,
+  .site-cta .rr-btn {
+    box-sizing: border-box;
+    height: 48px;
+    padding: 0 24px !important;
+    box-shadow: 0 8px 20px rgb(80 185 72 / 24%);
+  }
+  main .rr-btn.rr-btn__transparent,
+  .site-cta .rr-btn.rr-btn__transparent {
+    box-shadow: none;
+  }
+  /* buttons that share a row keep tighter sides so two fit */
+  .home-hero__actions .rr-btn,
+  .site-cta__actions .rr-btn,
+  .thanks-card__actions .rr-btn {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  main .rr-btn .btn-wrap span,
+  .site-cta .rr-btn .btn-wrap span {
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    text-transform: none;
+  }
+  main .rr-btn .btn-wrap i,
+  .site-cta .rr-btn .btn-wrap i {
+    padding: 0 !important;
+    margin-inline-start: 8px !important;
+    font-size: 13px;
+  }
+}
+
+/* Phones: stand-alone section buttons all share one compact width */
+@media (max-width: 575px) {
+  main .rr-btn:not(.home-hero__actions .rr-btn):not(.site-cta__actions .rr-btn):not(.thanks-card__actions .rr-btn):not(.appt-form__foot .rr-btn) {
+    width: 220px !important;
+    max-width: 100%;
+    padding: 0 14px !important;
+    justify-content: center;
+  }
+  .btn-long {
+    display: none;
+  }
+  .nf__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
