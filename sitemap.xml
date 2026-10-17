@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://majaneyecenter.com/about-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/about-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/about.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/about.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/about-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/about.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/appointment-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/appointment.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/appointment-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/appointment.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/appointment.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/appointment.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/appointment-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/appointment.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/contact-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/contact-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/contact.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/contact.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/contact-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/contact.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/faq-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/faq-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/faq.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/faq.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/faq-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/faq.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/index-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/index-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/index-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/insurance-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/insurance.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/insurance-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/insurance.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/insurance.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/insurance.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/insurance-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/insurance.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/blepharoplasty-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/blepharoplasty.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/blepharoplasty-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/blepharoplasty.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/blepharoplasty.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/blepharoplasty.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/blepharoplasty-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/blepharoplasty.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/cataract-surgery-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/cataract-surgery.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/cataract-surgery-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/cataract-surgery.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/cataract-surgery.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/cataract-surgery.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/cataract-surgery-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/cataract-surgery.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/chalazion-excision-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/chalazion-excision.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/chalazion-excision-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/chalazion-excision.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/chalazion-excision.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/chalazion-excision.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/chalazion-excision-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/chalazion-excision.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/comprehensive-eye-exam-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/comprehensive-eye-exam.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/comprehensive-eye-exam-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/comprehensive-eye-exam.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/comprehensive-eye-exam.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/comprehensive-eye-exam.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/comprehensive-eye-exam-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/comprehensive-eye-exam.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/contact-lens-keratoconus-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/contact-lens-keratoconus.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/contact-lens-keratoconus-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/contact-lens-keratoconus.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/contact-lens-keratoconus.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/contact-lens-keratoconus.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/contact-lens-keratoconus-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/contact-lens-keratoconus.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/diabetic-eye-screening-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/diabetic-eye-screening.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/diabetic-eye-screening-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/diabetic-eye-screening.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/diabetic-eye-screening.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/diabetic-eye-screening.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/diabetic-eye-screening-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/diabetic-eye-screening.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/entropion-surgery-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/entropion-surgery.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/entropion-surgery-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/entropion-surgery.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/entropion-surgery.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/entropion-surgery.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/entropion-surgery-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/entropion-surgery.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/eye-injury-treatment-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/eye-injury-treatment.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/eye-injury-treatment-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/eye-injury-treatment.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/eye-injury-treatment.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/eye-injury-treatment.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/eye-injury-treatment-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/eye-injury-treatment.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/eyelid-cyst-removal-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/eyelid-cyst-removal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/eyelid-cyst-removal-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/eyelid-cyst-removal.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/eyelid-cyst-removal.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/eyelid-cyst-removal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/eyelid-cyst-removal-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/eyelid-cyst-removal.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/glaucoma-cataract-complications-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/glaucoma-cataract-complications.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/glaucoma-cataract-complications-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/glaucoma-cataract-complications.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/glaucoma-cataract-complications.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/glaucoma-cataract-complications.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/glaucoma-cataract-complications-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/glaucoma-cataract-complications.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/glaucoma-treatment-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/glaucoma-treatment.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/glaucoma-treatment-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/glaucoma-treatment.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/glaucoma-treatment.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/glaucoma-treatment.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/glaucoma-treatment-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/glaucoma-treatment.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/intravitreal-injection-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/intravitreal-injection.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/intravitreal-injection-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/intravitreal-injection.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/intravitreal-injection.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/intravitreal-injection.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/intravitreal-injection-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/intravitreal-injection.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/lasik-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/lasik.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/lasik-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/lasik.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/lasik.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/lasik.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/lasik-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/lasik.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/low-vision-aids-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/low-vision-aids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/low-vision-aids-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/low-vision-aids.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/low-vision-aids.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/low-vision-aids.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/low-vision-aids-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/low-vision-aids.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/meibomian-gland-probing-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/meibomian-gland-probing.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/meibomian-gland-probing-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/meibomian-gland-probing.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/meibomian-gland-probing.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/meibomian-gland-probing.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/meibomian-gland-probing-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/meibomian-gland-probing.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/newborn-eye-exam-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/newborn-eye-exam.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/newborn-eye-exam-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/newborn-eye-exam.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/newborn-eye-exam.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/newborn-eye-exam.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/newborn-eye-exam-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/newborn-eye-exam.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/oculoplastic-surgery-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/oculoplastic-surgery.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/oculoplastic-surgery-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/oculoplastic-surgery.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/oculoplastic-surgery.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/oculoplastic-surgery.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/oculoplastic-surgery-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/oculoplastic-surgery.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/paediatric-ophthalmology-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/paediatric-ophthalmology.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/paediatric-ophthalmology-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/paediatric-ophthalmology.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/paediatric-ophthalmology.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/paediatric-ophthalmology.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/paediatric-ophthalmology-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/paediatric-ophthalmology.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/pterygium-excision-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/pterygium-excision.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/pterygium-excision-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/pterygium-excision.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/pterygium-excision.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/pterygium-excision.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/pterygium-excision-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/pterygium-excision.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/retina-clinic-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/retina-clinic.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/retina-clinic-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/retina-clinic.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/retina-clinic.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/retina-clinic.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/retina-clinic-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/retina-clinic.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/retinal-holes-diabetic-retinopathy-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/retinal-holes-diabetic-retinopathy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/retinal-holes-diabetic-retinopathy-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/retinal-holes-diabetic-retinopathy.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/retinal-holes-diabetic-retinopathy.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/retinal-holes-diabetic-retinopathy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/retinal-holes-diabetic-retinopathy-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/retinal-holes-diabetic-retinopathy.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/strabismus-amblyopia-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/strabismus-amblyopia.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/strabismus-amblyopia-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/strabismus-amblyopia.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/strabismus-amblyopia.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/strabismus-amblyopia.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/strabismus-amblyopia-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/strabismus-amblyopia.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/suture-removal-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/suture-removal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/suture-removal-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/suture-removal.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/suture-removal.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/suture-removal.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/suture-removal-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/suture-removal.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/syringing-probing-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/syringing-probing.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/syringing-probing-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/syringing-probing.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/services/syringing-probing.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/services/syringing-probing.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/services/syringing-probing-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/services/syringing-probing.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/team-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/team.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/team-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/team.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/team.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/team.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/team-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/team.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/technology-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/technology.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/technology-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/technology.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/technology.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/technology.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/technology-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/technology.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/testimonials-ar.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/testomonials.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/testimonials-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/testomonials.html"/>
+  </url>
+  <url>
+    <loc>https://majaneyecenter.com/testomonials.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://majaneyecenter.com/testomonials.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://majaneyecenter.com/testimonials-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://majaneyecenter.com/testomonials.html"/>
+  </url>
+</urlset>

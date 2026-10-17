@@ -247,6 +247,28 @@
     });
 
     /*======================================
+      404: the eye follows the pointer
+      ========================================*/
+    (function () {
+        const eye = document.querySelector(".nf__eye");
+        if (!eye || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        const iris = eye.querySelector(".nf__iris");
+        let frame = 0;
+        window.addEventListener("pointermove", function (event) {
+            if (frame) return;
+            frame = requestAnimationFrame(function () {
+                frame = 0;
+                const box = eye.getBoundingClientRect();
+                const dx = event.clientX - (box.left + box.width / 2);
+                const dy = event.clientY - (box.top + box.height / 2);
+                const angle = Math.atan2(dy, dx);
+                const reach = Math.min(1, Math.hypot(dx, dy) / 300) * box.width * 0.2;
+                iris.style.transform = "translate(" + Math.cos(angle) * reach + "px, " + Math.sin(angle) * reach + "px)";
+            });
+        });
+    })();
+
+    /*======================================
       Footer Pointer Light
       ========================================*/
     (function () {
