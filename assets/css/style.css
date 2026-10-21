@@ -10864,3 +10864,24 @@ a.rr-btn[href$="appointment-ar.html"] {
     align-items: center;
   }
 }
+
+/*----------------------------------------*/
+/*  Services page: Why Choose
+/*----------------------------------------*/
+.svc-detail .home-why__lead,
+.home-why__lead {
+  max-width: 460px;
+  margin: -14px 0 28px;
+  font-size: 16px;
+  line-height: 27px;
+  color: var(--rr-common-placeholder);
+}
+@media (max-width: 991px) {
+  .home-why__lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.svc-care .home-section-cta {
+  margin-top: 34px;
+}
