@@ -11190,3 +11190,9 @@ body.arabic .svc-book__eyebrow {
     aspect-ratio: 16 / 6;
   }
 }
+
+/* Arabic pages: animated counters keep their digits left to right */
+[dir="rtl"] .odometer {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
