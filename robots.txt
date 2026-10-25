@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# working files that are not part of the website
+Disallow: /homepagecontent.html
+Disallow: /google-apps-script/
+
+Sitemap: https://majaneyecenter.com/sitemap.xml
