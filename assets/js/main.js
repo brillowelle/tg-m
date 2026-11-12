@@ -92,6 +92,137 @@
     });
 
     /*======================================
+      Blog: search, category filter & reading progress
+      ========================================*/
+    (function () {
+        const grid = document.querySelector("[data-blog-grid]");
+        if (grid) {
+            const items = Array.from(grid.querySelectorAll("[data-blog-item]"));
+            const filters = Array.from(document.querySelectorAll("[data-blog-filter]"));
+            const form = document.querySelector("[data-blog-search]");
+            const input = form ? form.querySelector("input[name='q']") : null;
+            const empty = document.querySelector("[data-blog-empty]");
+            const moreWrap = document.querySelector("[data-blog-more-wrap]");
+            const moreBtn = document.querySelector("[data-blog-more]");
+            const countEl = document.querySelector("[data-blog-count]");
+            const pageSize = parseInt(grid.dataset.blogPageSize, 10) || 6;
+            let limit = pageSize;
+            const params = new URLSearchParams(location.search);
+            const normalise = function (s) { return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); };
+
+            let category = params.get("cat") || "all";
+            let query = (params.get("q") || "").trim();
+            if (!filters.some(function (btn) { return btn.dataset.blogFilter === category; })) category = "all";
+            if (input) input.value = query;
+
+            const syncUrl = function () {
+                const url = new URL(location.href);
+                category === "all" ? url.searchParams.delete("cat") : url.searchParams.set("cat", category);
+                query ? url.searchParams.set("q", query) : url.searchParams.delete("q");
+                history.replaceState(null, "", url.pathname + url.search + url.hash);
+            };
+
+            const apply = function (reveal) {
+                const terms = normalise(query).split(/\s+/).filter(Boolean);
+                let matched = 0;
+                let shown = 0;
+                items.forEach(function (item) {
+                    const text = normalise(item.textContent);
+                    const matches = (category === "all" || item.dataset.category === category) &&
+                        terms.every(function (t) { return text.includes(t); });
+                    const visible = matches && matched < limit;
+                    if (matches) matched++;
+                    const card = item.querySelector(".blog-card");
+                    if (card) card.classList.toggle("is-revealed", !!reveal && visible && item.hidden);
+                    item.hidden = !visible;
+                    if (visible) shown++;
+                });
+                if (moreWrap) moreWrap.hidden = matched <= shown;
+                if (countEl) countEl.textContent = "Showing " + shown + " of " + matched + " articles";
+                filters.forEach(function (btn) {
+                    const active = btn.dataset.blogFilter === category;
+                    btn.classList.toggle("active", active);
+                    btn.setAttribute("aria-pressed", active ? "true" : "false");
+                });
+                if (empty) empty.hidden = shown > 0;
+                if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();
+            };
+
+            filters.forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    category = btn.dataset.blogFilter;
+                    limit = pageSize;
+                    apply();
+                    syncUrl();
+                });
+            });
+            if (form && input) {
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    query = input.value.trim();
+                    limit = pageSize;
+                    apply();
+                    syncUrl();
+                    grid.scrollIntoView({ behavior: "smooth", block: "start" });
+                });
+                input.addEventListener("input", function () {
+                    query = input.value.trim();
+                    limit = pageSize;
+                    apply();
+                    syncUrl();
+                });
+            }
+            document.querySelectorAll("[data-blog-reset]").forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    category = "all";
+                    query = "";
+                    limit = pageSize;
+                    if (input) input.value = "";
+                    apply();
+                    syncUrl();
+                });
+            });
+            if (moreBtn) {
+                moreBtn.addEventListener("click", function () {
+                    const firstNew = items.filter(function (item) { return item.hidden; });
+                    limit += pageSize;
+                    apply(true);
+                    // Move keyboard focus to the first newly revealed article
+                    const target = firstNew.find(function (item) { return !item.hidden; });
+                    const link = target && target.querySelector(".blog-card__title a");
+                    if (link) link.focus({ preventScroll: true });
+                });
+            }
+            apply();
+        }
+
+        const article = document.querySelector("[data-blog-article]");
+        if (article) {
+            const bar = document.createElement("div");
+            bar.className = "blog-progress";
+            bar.setAttribute("aria-hidden", "true");
+            document.body.appendChild(bar);
+
+            let ticking = false;
+            const update = function () {
+                const rect = article.getBoundingClientRect();
+                const total = rect.height - window.innerHeight;
+                const progress = total > 0 ? Math.min(Math.max(-rect.top / total, 0), 1) : 1;
+                bar.style.transform = "scaleX(" + progress + ")";
+                ticking = false;
+            };
+            window.addEventListener("scroll", function () {
+                if (!ticking) {
+                    ticking = true;
+                    requestAnimationFrame(update);
+                }
+            }, { passive: true });
+            window.addEventListener("resize", update);
+            update();
+        }
+    })();
+
+    /*======================================
       Smooth Scrolling
       ========================================*/
     (function () {
